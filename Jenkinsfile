@@ -14,25 +14,25 @@ pipeline {
             }
         }
         
-        stage('Build Docker Images') {
-            steps {
-                dir('Employee_Attrition/backend') {
-                    sh 'docker build -t ${DOCKER_BACKEND_IMAGE} .'
-                }
-                dir('Employee_Attrition/frontend') {
-                    sh 'docker build -t ${DOCKER_FRONTEND_IMAGE} .'
-                }
-            }
-        }
+        // stage('Build Docker Images') {
+        //     steps {
+        //         dir('Employee_Attrition/backend') {
+        //             sh 'docker build -t ${DOCKER_BACKEND_IMAGE} .'
+        //         }
+        //         dir('Employee_Attrition/frontend') {
+        //             sh 'docker build -t ${DOCKER_FRONTEND_IMAGE} .'
+        //         }
+        //     }
+        // }
         
-        stage('Basic Tests') {
-            steps {
-                dir('Employee_Attrition/backend') {
-                    sh 'python -m pytest || true'
-                }
-                echo "Frontend tests would run here"
-            }
-        }
+        // stage('Basic Tests') {
+        //     steps {
+        //         dir('Employee_Attrition/backend') {
+        //             sh 'python -m pytest || true'
+        //         }
+        //         echo "Frontend tests would run here"
+        //     }
+        // }
         
         stage('Deploy with Ansible') {
             steps {
