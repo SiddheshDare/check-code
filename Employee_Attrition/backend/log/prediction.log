@@ -1,0 +1,1574 @@
+2025-04-27 06:42:40,878 - INFO - Loading data from database...
+2025-04-27 06:42:40,905 - INFO - Preprocessing data...
+2025-04-27 06:42:40,918 - INFO - Training model...
+2025-04-27 06:42:43,157 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.92      0.89      0.90       255
+           1       0.40      0.46      0.43        39
+
+    accuracy                           0.84       294
+   macro avg       0.66      0.68      0.67       294
+weighted avg       0.85      0.84      0.84       294
+
+2025-04-27 06:42:43,158 - INFO - Confusion Matrix:
+[[228  27]
+ [ 21  18]]
+2025-04-27 06:42:43,159 - INFO - Accuracy: 0.8367
+2025-04-27 06:42:43,159 - INFO - Precision: 0.8473
+2025-04-27 06:42:43,159 - INFO - Recall: 0.8367
+2025-04-27 06:42:43,159 - INFO - F1_score: 0.8416
+2025-04-27 06:42:43,213 - INFO - Model saved successfully to /home/rishabh/SPE/Employee_Attrition/backend/pickle/model.sav
+2025-04-27 06:42:43,213 - INFO - Training completed successfully
+2025-04-27 06:42:49,573 - INFO - Received input data: dict_keys(['features'])
+2025-04-27 06:42:49,575 - INFO - Input data shape: (1, 34)
+2025-04-27 06:42:49,579 - WARNING - Added missing feature: Age
+2025-04-27 06:42:49,580 - WARNING - Added missing feature: DailyRate
+2025-04-27 06:42:49,580 - WARNING - Added missing feature: DistanceFromHome
+2025-04-27 06:42:49,580 - WARNING - Added missing feature: Education
+2025-04-27 06:42:49,580 - WARNING - Added missing feature: EmployeeCount
+2025-04-27 06:42:49,581 - WARNING - Added missing feature: EmployeeNumber
+2025-04-27 06:42:49,581 - WARNING - Added missing feature: EnvironmentSatisfaction
+2025-04-27 06:42:49,581 - WARNING - Added missing feature: HourlyRate
+2025-04-27 06:42:49,581 - WARNING - Added missing feature: JobInvolvement
+2025-04-27 06:42:49,582 - WARNING - Added missing feature: JobLevel
+2025-04-27 06:42:49,582 - WARNING - Added missing feature: JobSatisfaction
+2025-04-27 06:42:49,582 - WARNING - Added missing feature: MonthlyIncome
+2025-04-27 06:42:49,582 - WARNING - Added missing feature: MonthlyRate
+2025-04-27 06:42:49,583 - WARNING - Added missing feature: NumCompaniesWorked
+2025-04-27 06:42:49,583 - WARNING - Added missing feature: PercentSalaryHike
+2025-04-27 06:42:49,583 - WARNING - Added missing feature: PerformanceRating
+2025-04-27 06:42:49,583 - WARNING - Added missing feature: RelationshipSatisfaction
+2025-04-27 06:42:49,584 - WARNING - Added missing feature: StandardHours
+2025-04-27 06:42:49,584 - WARNING - Added missing feature: StockOptionLevel
+2025-04-27 06:42:49,584 - WARNING - Added missing feature: TotalWorkingYears
+2025-04-27 06:42:49,585 - WARNING - Added missing feature: TrainingTimesLastYear
+2025-04-27 06:42:49,585 - WARNING - Added missing feature: WorkLifeBalance
+2025-04-27 06:42:49,585 - WARNING - Added missing feature: YearsAtCompany
+2025-04-27 06:42:49,585 - WARNING - Added missing feature: YearsInCurrentRole
+2025-04-27 06:42:49,586 - WARNING - Added missing feature: YearsSinceLastPromotion
+2025-04-27 06:42:49,586 - WARNING - Added missing feature: YearsWithCurrManager
+2025-04-27 06:42:49,586 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-27 06:42:49,586 - WARNING - Added missing feature: BusinessTravel_Travel_Rarely
+2025-04-27 06:42:49,587 - WARNING - Added missing feature: Department_Research & Development
+2025-04-27 06:42:49,587 - WARNING - Added missing feature: Department_Sales
+2025-04-27 06:42:49,587 - WARNING - Added missing feature: EducationField_Life Sciences
+2025-04-27 06:42:49,587 - WARNING - Added missing feature: EducationField_Marketing
+2025-04-27 06:42:49,588 - WARNING - Added missing feature: EducationField_Medical
+2025-04-27 06:42:49,588 - WARNING - Added missing feature: EducationField_Other
+2025-04-27 06:42:49,588 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-27 06:42:49,588 - WARNING - Added missing feature: Gender_Male
+2025-04-27 06:42:49,589 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-27 06:42:49,589 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-27 06:42:49,589 - WARNING - Added missing feature: JobRole_Manager
+2025-04-27 06:42:49,589 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-27 06:42:49,590 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-27 06:42:49,590 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-27 06:42:49,590 - WARNING - Added missing feature: JobRole_Sales Executive
+2025-04-27 06:42:49,590 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-27 06:42:49,591 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-27 06:42:49,591 - WARNING - Added missing feature: MaritalStatus_Single
+2025-04-27 06:42:49,591 - WARNING - Added missing feature: OverTime_Yes
+2025-04-27 06:42:49,922 - INFO - Prediction successful: {'prediction': 'Yes', 'probability': 0.8502598763604174, 'confidence': 'High'}
+2025-04-27 06:43:04,212 - INFO - Received input data: dict_keys(['features'])
+2025-04-27 06:43:04,214 - INFO - Input data shape: (1, 34)
+2025-04-27 06:43:04,218 - WARNING - Added missing feature: Age
+2025-04-27 06:43:04,218 - WARNING - Added missing feature: DailyRate
+2025-04-27 06:43:04,219 - WARNING - Added missing feature: DistanceFromHome
+2025-04-27 06:43:04,219 - WARNING - Added missing feature: Education
+2025-04-27 06:43:04,219 - WARNING - Added missing feature: EmployeeCount
+2025-04-27 06:43:04,220 - WARNING - Added missing feature: EmployeeNumber
+2025-04-27 06:43:04,220 - WARNING - Added missing feature: EnvironmentSatisfaction
+2025-04-27 06:43:04,220 - WARNING - Added missing feature: HourlyRate
+2025-04-27 06:43:04,220 - WARNING - Added missing feature: JobInvolvement
+2025-04-27 06:43:04,221 - WARNING - Added missing feature: JobLevel
+2025-04-27 06:43:04,221 - WARNING - Added missing feature: JobSatisfaction
+2025-04-27 06:43:04,221 - WARNING - Added missing feature: MonthlyIncome
+2025-04-27 06:43:04,221 - WARNING - Added missing feature: MonthlyRate
+2025-04-27 06:43:04,222 - WARNING - Added missing feature: NumCompaniesWorked
+2025-04-27 06:43:04,222 - WARNING - Added missing feature: PercentSalaryHike
+2025-04-27 06:43:04,222 - WARNING - Added missing feature: PerformanceRating
+2025-04-27 06:43:04,222 - WARNING - Added missing feature: RelationshipSatisfaction
+2025-04-27 06:43:04,223 - WARNING - Added missing feature: StandardHours
+2025-04-27 06:43:04,223 - WARNING - Added missing feature: StockOptionLevel
+2025-04-27 06:43:04,223 - WARNING - Added missing feature: TotalWorkingYears
+2025-04-27 06:43:04,223 - WARNING - Added missing feature: TrainingTimesLastYear
+2025-04-27 06:43:04,224 - WARNING - Added missing feature: WorkLifeBalance
+2025-04-27 06:43:04,224 - WARNING - Added missing feature: YearsAtCompany
+2025-04-27 06:43:04,224 - WARNING - Added missing feature: YearsInCurrentRole
+2025-04-27 06:43:04,224 - WARNING - Added missing feature: YearsSinceLastPromotion
+2025-04-27 06:43:04,225 - WARNING - Added missing feature: YearsWithCurrManager
+2025-04-27 06:43:04,225 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-27 06:43:04,225 - WARNING - Added missing feature: BusinessTravel_Travel_Rarely
+2025-04-27 06:43:04,225 - WARNING - Added missing feature: Department_Research & Development
+2025-04-27 06:43:04,226 - WARNING - Added missing feature: Department_Sales
+2025-04-27 06:43:04,226 - WARNING - Added missing feature: EducationField_Life Sciences
+2025-04-27 06:43:04,226 - WARNING - Added missing feature: EducationField_Marketing
+2025-04-27 06:43:04,226 - WARNING - Added missing feature: EducationField_Medical
+2025-04-27 06:43:04,227 - WARNING - Added missing feature: EducationField_Other
+2025-04-27 06:43:04,227 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-27 06:43:04,227 - WARNING - Added missing feature: Gender_Male
+2025-04-27 06:43:04,227 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-27 06:43:04,228 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-27 06:43:04,228 - WARNING - Added missing feature: JobRole_Manager
+2025-04-27 06:43:04,228 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-27 06:43:04,228 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-27 06:43:04,229 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-27 06:43:04,229 - WARNING - Added missing feature: JobRole_Sales Executive
+2025-04-27 06:43:04,229 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-27 06:43:04,229 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-27 06:43:04,230 - WARNING - Added missing feature: MaritalStatus_Single
+2025-04-27 06:43:04,230 - WARNING - Added missing feature: OverTime_Yes
+2025-04-27 06:43:04,558 - INFO - Prediction successful: {'prediction': 'Yes', 'probability': 0.8502598763604174, 'confidence': 'High'}
+2025-04-27 06:43:13,181 - INFO - Received input data: dict_keys(['features'])
+2025-04-27 06:43:13,183 - INFO - Input data shape: (1, 34)
+2025-04-27 06:43:13,187 - WARNING - Added missing feature: Age
+2025-04-27 06:43:13,187 - WARNING - Added missing feature: DailyRate
+2025-04-27 06:43:13,188 - WARNING - Added missing feature: DistanceFromHome
+2025-04-27 06:43:13,188 - WARNING - Added missing feature: Education
+2025-04-27 06:43:13,188 - WARNING - Added missing feature: EmployeeCount
+2025-04-27 06:43:13,188 - WARNING - Added missing feature: EmployeeNumber
+2025-04-27 06:43:13,189 - WARNING - Added missing feature: EnvironmentSatisfaction
+2025-04-27 06:43:13,189 - WARNING - Added missing feature: HourlyRate
+2025-04-27 06:43:13,189 - WARNING - Added missing feature: JobInvolvement
+2025-04-27 06:43:13,189 - WARNING - Added missing feature: JobLevel
+2025-04-27 06:43:13,190 - WARNING - Added missing feature: JobSatisfaction
+2025-04-27 06:43:13,190 - WARNING - Added missing feature: MonthlyIncome
+2025-04-27 06:43:13,190 - WARNING - Added missing feature: MonthlyRate
+2025-04-27 06:43:13,190 - WARNING - Added missing feature: NumCompaniesWorked
+2025-04-27 06:43:13,191 - WARNING - Added missing feature: PercentSalaryHike
+2025-04-27 06:43:13,191 - WARNING - Added missing feature: PerformanceRating
+2025-04-27 06:43:13,191 - WARNING - Added missing feature: RelationshipSatisfaction
+2025-04-27 06:43:13,191 - WARNING - Added missing feature: StandardHours
+2025-04-27 06:43:13,192 - WARNING - Added missing feature: StockOptionLevel
+2025-04-27 06:43:13,192 - WARNING - Added missing feature: TotalWorkingYears
+2025-04-27 06:43:13,192 - WARNING - Added missing feature: TrainingTimesLastYear
+2025-04-27 06:43:13,192 - WARNING - Added missing feature: WorkLifeBalance
+2025-04-27 06:43:13,193 - WARNING - Added missing feature: YearsAtCompany
+2025-04-27 06:43:13,193 - WARNING - Added missing feature: YearsInCurrentRole
+2025-04-27 06:43:13,193 - WARNING - Added missing feature: YearsSinceLastPromotion
+2025-04-27 06:43:13,193 - WARNING - Added missing feature: YearsWithCurrManager
+2025-04-27 06:43:13,194 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-27 06:43:13,194 - WARNING - Added missing feature: BusinessTravel_Travel_Rarely
+2025-04-27 06:43:13,194 - WARNING - Added missing feature: Department_Research & Development
+2025-04-27 06:43:13,194 - WARNING - Added missing feature: Department_Sales
+2025-04-27 06:43:13,195 - WARNING - Added missing feature: EducationField_Life Sciences
+2025-04-27 06:43:13,195 - WARNING - Added missing feature: EducationField_Marketing
+2025-04-27 06:43:13,195 - WARNING - Added missing feature: EducationField_Medical
+2025-04-27 06:43:13,195 - WARNING - Added missing feature: EducationField_Other
+2025-04-27 06:43:13,196 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-27 06:43:13,196 - WARNING - Added missing feature: Gender_Male
+2025-04-27 06:43:13,196 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-27 06:43:13,196 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-27 06:43:13,197 - WARNING - Added missing feature: JobRole_Manager
+2025-04-27 06:43:13,197 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-27 06:43:13,197 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-27 06:43:13,198 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-27 06:43:13,198 - WARNING - Added missing feature: JobRole_Sales Executive
+2025-04-27 06:43:13,198 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-27 06:43:13,198 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-27 06:43:13,199 - WARNING - Added missing feature: MaritalStatus_Single
+2025-04-27 06:43:13,199 - WARNING - Added missing feature: OverTime_Yes
+2025-04-27 06:43:13,519 - INFO - Prediction successful: {'prediction': 'Yes', 'probability': 0.8502598763604174, 'confidence': 'High'}
+2025-04-27 06:43:24,942 - INFO - Received input data: dict_keys(['features'])
+2025-04-27 06:43:24,944 - INFO - Input data shape: (1, 34)
+2025-04-27 06:43:24,948 - WARNING - Added missing feature: Age
+2025-04-27 06:43:24,948 - WARNING - Added missing feature: DailyRate
+2025-04-27 06:43:24,949 - WARNING - Added missing feature: DistanceFromHome
+2025-04-27 06:43:24,949 - WARNING - Added missing feature: Education
+2025-04-27 06:43:24,949 - WARNING - Added missing feature: EmployeeCount
+2025-04-27 06:43:24,950 - WARNING - Added missing feature: EmployeeNumber
+2025-04-27 06:43:24,950 - WARNING - Added missing feature: EnvironmentSatisfaction
+2025-04-27 06:43:24,950 - WARNING - Added missing feature: HourlyRate
+2025-04-27 06:43:24,950 - WARNING - Added missing feature: JobInvolvement
+2025-04-27 06:43:24,951 - WARNING - Added missing feature: JobLevel
+2025-04-27 06:43:24,951 - WARNING - Added missing feature: JobSatisfaction
+2025-04-27 06:43:24,951 - WARNING - Added missing feature: MonthlyIncome
+2025-04-27 06:43:24,951 - WARNING - Added missing feature: MonthlyRate
+2025-04-27 06:43:24,952 - WARNING - Added missing feature: NumCompaniesWorked
+2025-04-27 06:43:24,952 - WARNING - Added missing feature: PercentSalaryHike
+2025-04-27 06:43:24,952 - WARNING - Added missing feature: PerformanceRating
+2025-04-27 06:43:24,952 - WARNING - Added missing feature: RelationshipSatisfaction
+2025-04-27 06:43:24,953 - WARNING - Added missing feature: StandardHours
+2025-04-27 06:43:24,953 - WARNING - Added missing feature: StockOptionLevel
+2025-04-27 06:43:24,953 - WARNING - Added missing feature: TotalWorkingYears
+2025-04-27 06:43:24,953 - WARNING - Added missing feature: TrainingTimesLastYear
+2025-04-27 06:43:24,954 - WARNING - Added missing feature: WorkLifeBalance
+2025-04-27 06:43:24,954 - WARNING - Added missing feature: YearsAtCompany
+2025-04-27 06:43:24,954 - WARNING - Added missing feature: YearsInCurrentRole
+2025-04-27 06:43:24,954 - WARNING - Added missing feature: YearsSinceLastPromotion
+2025-04-27 06:43:24,955 - WARNING - Added missing feature: YearsWithCurrManager
+2025-04-27 06:43:24,955 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-27 06:43:24,955 - WARNING - Added missing feature: BusinessTravel_Travel_Rarely
+2025-04-27 06:43:24,955 - WARNING - Added missing feature: Department_Research & Development
+2025-04-27 06:43:24,956 - WARNING - Added missing feature: Department_Sales
+2025-04-27 06:43:24,956 - WARNING - Added missing feature: EducationField_Life Sciences
+2025-04-27 06:43:24,956 - WARNING - Added missing feature: EducationField_Marketing
+2025-04-27 06:43:24,956 - WARNING - Added missing feature: EducationField_Medical
+2025-04-27 06:43:24,957 - WARNING - Added missing feature: EducationField_Other
+2025-04-27 06:43:24,957 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-27 06:43:24,957 - WARNING - Added missing feature: Gender_Male
+2025-04-27 06:43:24,958 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-27 06:43:24,958 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-27 06:43:24,958 - WARNING - Added missing feature: JobRole_Manager
+2025-04-27 06:43:24,958 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-27 06:43:24,959 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-27 06:43:24,959 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-27 06:43:24,959 - WARNING - Added missing feature: JobRole_Sales Executive
+2025-04-27 06:43:24,959 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-27 06:43:24,960 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-27 06:43:24,960 - WARNING - Added missing feature: MaritalStatus_Single
+2025-04-27 06:43:24,960 - WARNING - Added missing feature: OverTime_Yes
+2025-04-27 06:43:25,264 - INFO - Prediction successful: {'prediction': 'Yes', 'probability': 0.8502598763604174, 'confidence': 'High'}
+2025-04-27 06:43:33,979 - INFO - Received input data: dict_keys(['features'])
+2025-04-27 06:43:33,981 - INFO - Input data shape: (1, 34)
+2025-04-27 06:43:33,985 - WARNING - Added missing feature: Age
+2025-04-27 06:43:33,986 - WARNING - Added missing feature: DailyRate
+2025-04-27 06:43:33,986 - WARNING - Added missing feature: DistanceFromHome
+2025-04-27 06:43:33,986 - WARNING - Added missing feature: Education
+2025-04-27 06:43:33,986 - WARNING - Added missing feature: EmployeeCount
+2025-04-27 06:43:33,987 - WARNING - Added missing feature: EmployeeNumber
+2025-04-27 06:43:33,987 - WARNING - Added missing feature: EnvironmentSatisfaction
+2025-04-27 06:43:33,987 - WARNING - Added missing feature: HourlyRate
+2025-04-27 06:43:33,987 - WARNING - Added missing feature: JobInvolvement
+2025-04-27 06:43:33,988 - WARNING - Added missing feature: JobLevel
+2025-04-27 06:43:33,988 - WARNING - Added missing feature: JobSatisfaction
+2025-04-27 06:43:33,988 - WARNING - Added missing feature: MonthlyIncome
+2025-04-27 06:43:33,988 - WARNING - Added missing feature: MonthlyRate
+2025-04-27 06:43:33,989 - WARNING - Added missing feature: NumCompaniesWorked
+2025-04-27 06:43:33,989 - WARNING - Added missing feature: PercentSalaryHike
+2025-04-27 06:43:33,989 - WARNING - Added missing feature: PerformanceRating
+2025-04-27 06:43:33,989 - WARNING - Added missing feature: RelationshipSatisfaction
+2025-04-27 06:43:33,990 - WARNING - Added missing feature: StandardHours
+2025-04-27 06:43:33,990 - WARNING - Added missing feature: StockOptionLevel
+2025-04-27 06:43:33,990 - WARNING - Added missing feature: TotalWorkingYears
+2025-04-27 06:43:33,990 - WARNING - Added missing feature: TrainingTimesLastYear
+2025-04-27 06:43:33,991 - WARNING - Added missing feature: WorkLifeBalance
+2025-04-27 06:43:33,991 - WARNING - Added missing feature: YearsAtCompany
+2025-04-27 06:43:33,991 - WARNING - Added missing feature: YearsInCurrentRole
+2025-04-27 06:43:33,991 - WARNING - Added missing feature: YearsSinceLastPromotion
+2025-04-27 06:43:33,992 - WARNING - Added missing feature: YearsWithCurrManager
+2025-04-27 06:43:33,992 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-27 06:43:33,992 - WARNING - Added missing feature: BusinessTravel_Travel_Rarely
+2025-04-27 06:43:33,993 - WARNING - Added missing feature: Department_Research & Development
+2025-04-27 06:43:33,993 - WARNING - Added missing feature: Department_Sales
+2025-04-27 06:43:33,993 - WARNING - Added missing feature: EducationField_Life Sciences
+2025-04-27 06:43:33,993 - WARNING - Added missing feature: EducationField_Marketing
+2025-04-27 06:43:33,994 - WARNING - Added missing feature: EducationField_Medical
+2025-04-27 06:43:33,994 - WARNING - Added missing feature: EducationField_Other
+2025-04-27 06:43:33,994 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-27 06:43:33,994 - WARNING - Added missing feature: Gender_Male
+2025-04-27 06:43:33,995 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-27 06:43:33,995 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-27 06:43:33,995 - WARNING - Added missing feature: JobRole_Manager
+2025-04-27 06:43:33,995 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-27 06:43:33,996 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-27 06:43:33,996 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-27 06:43:33,996 - WARNING - Added missing feature: JobRole_Sales Executive
+2025-04-27 06:43:33,996 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-27 06:43:33,997 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-27 06:43:33,997 - WARNING - Added missing feature: MaritalStatus_Single
+2025-04-27 06:43:33,997 - WARNING - Added missing feature: OverTime_Yes
+2025-04-27 06:43:34,295 - INFO - Prediction successful: {'prediction': 'Yes', 'probability': 0.8502598763604174, 'confidence': 'High'}
+2025-04-27 06:43:39,788 - INFO - Received input data: dict_keys(['features'])
+2025-04-27 06:43:39,790 - INFO - Input data shape: (1, 34)
+2025-04-27 06:43:39,795 - WARNING - Added missing feature: Age
+2025-04-27 06:43:39,796 - WARNING - Added missing feature: DailyRate
+2025-04-27 06:43:39,796 - WARNING - Added missing feature: DistanceFromHome
+2025-04-27 06:43:39,796 - WARNING - Added missing feature: Education
+2025-04-27 06:43:39,797 - WARNING - Added missing feature: EmployeeCount
+2025-04-27 06:43:39,797 - WARNING - Added missing feature: EmployeeNumber
+2025-04-27 06:43:39,797 - WARNING - Added missing feature: EnvironmentSatisfaction
+2025-04-27 06:43:39,798 - WARNING - Added missing feature: HourlyRate
+2025-04-27 06:43:39,798 - WARNING - Added missing feature: JobInvolvement
+2025-04-27 06:43:39,798 - WARNING - Added missing feature: JobLevel
+2025-04-27 06:43:39,799 - WARNING - Added missing feature: JobSatisfaction
+2025-04-27 06:43:39,799 - WARNING - Added missing feature: MonthlyIncome
+2025-04-27 06:43:39,799 - WARNING - Added missing feature: MonthlyRate
+2025-04-27 06:43:39,800 - WARNING - Added missing feature: NumCompaniesWorked
+2025-04-27 06:43:39,800 - WARNING - Added missing feature: PercentSalaryHike
+2025-04-27 06:43:39,800 - WARNING - Added missing feature: PerformanceRating
+2025-04-27 06:43:39,801 - WARNING - Added missing feature: RelationshipSatisfaction
+2025-04-27 06:43:39,801 - WARNING - Added missing feature: StandardHours
+2025-04-27 06:43:39,801 - WARNING - Added missing feature: StockOptionLevel
+2025-04-27 06:43:39,802 - WARNING - Added missing feature: TotalWorkingYears
+2025-04-27 06:43:39,802 - WARNING - Added missing feature: TrainingTimesLastYear
+2025-04-27 06:43:39,802 - WARNING - Added missing feature: WorkLifeBalance
+2025-04-27 06:43:39,802 - WARNING - Added missing feature: YearsAtCompany
+2025-04-27 06:43:39,803 - WARNING - Added missing feature: YearsInCurrentRole
+2025-04-27 06:43:39,803 - WARNING - Added missing feature: YearsSinceLastPromotion
+2025-04-27 06:43:39,803 - WARNING - Added missing feature: YearsWithCurrManager
+2025-04-27 06:43:39,804 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-27 06:43:39,804 - WARNING - Added missing feature: BusinessTravel_Travel_Rarely
+2025-04-27 06:43:39,804 - WARNING - Added missing feature: Department_Research & Development
+2025-04-27 06:43:39,804 - WARNING - Added missing feature: Department_Sales
+2025-04-27 06:43:39,805 - WARNING - Added missing feature: EducationField_Life Sciences
+2025-04-27 06:43:39,805 - WARNING - Added missing feature: EducationField_Marketing
+2025-04-27 06:43:39,805 - WARNING - Added missing feature: EducationField_Medical
+2025-04-27 06:43:39,805 - WARNING - Added missing feature: EducationField_Other
+2025-04-27 06:43:39,806 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-27 06:43:39,806 - WARNING - Added missing feature: Gender_Male
+2025-04-27 06:43:39,806 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-27 06:43:39,807 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-27 06:43:39,807 - WARNING - Added missing feature: JobRole_Manager
+2025-04-27 06:43:39,807 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-27 06:43:39,808 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-27 06:43:39,808 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-27 06:43:39,808 - WARNING - Added missing feature: JobRole_Sales Executive
+2025-04-27 06:43:39,808 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-27 06:43:39,809 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-27 06:43:39,809 - WARNING - Added missing feature: MaritalStatus_Single
+2025-04-27 06:43:39,809 - WARNING - Added missing feature: OverTime_Yes
+2025-04-27 06:43:40,152 - INFO - Prediction successful: {'prediction': 'Yes', 'probability': 0.8502598763604174, 'confidence': 'High'}
+2025-04-27 06:43:48,642 - INFO - Received input data: dict_keys(['features'])
+2025-04-27 06:43:48,644 - INFO - Input data shape: (1, 34)
+2025-04-27 06:43:48,648 - WARNING - Added missing feature: Age
+2025-04-27 06:43:48,649 - WARNING - Added missing feature: DailyRate
+2025-04-27 06:43:48,649 - WARNING - Added missing feature: DistanceFromHome
+2025-04-27 06:43:48,649 - WARNING - Added missing feature: Education
+2025-04-27 06:43:48,650 - WARNING - Added missing feature: EmployeeCount
+2025-04-27 06:43:48,650 - WARNING - Added missing feature: EmployeeNumber
+2025-04-27 06:43:48,650 - WARNING - Added missing feature: EnvironmentSatisfaction
+2025-04-27 06:43:48,650 - WARNING - Added missing feature: HourlyRate
+2025-04-27 06:43:48,651 - WARNING - Added missing feature: JobInvolvement
+2025-04-27 06:43:48,651 - WARNING - Added missing feature: JobLevel
+2025-04-27 06:43:48,651 - WARNING - Added missing feature: JobSatisfaction
+2025-04-27 06:43:48,651 - WARNING - Added missing feature: MonthlyIncome
+2025-04-27 06:43:48,652 - WARNING - Added missing feature: MonthlyRate
+2025-04-27 06:43:48,652 - WARNING - Added missing feature: NumCompaniesWorked
+2025-04-27 06:43:48,652 - WARNING - Added missing feature: PercentSalaryHike
+2025-04-27 06:43:48,652 - WARNING - Added missing feature: PerformanceRating
+2025-04-27 06:43:48,653 - WARNING - Added missing feature: RelationshipSatisfaction
+2025-04-27 06:43:48,653 - WARNING - Added missing feature: StandardHours
+2025-04-27 06:43:48,653 - WARNING - Added missing feature: StockOptionLevel
+2025-04-27 06:43:48,653 - WARNING - Added missing feature: TotalWorkingYears
+2025-04-27 06:43:48,654 - WARNING - Added missing feature: TrainingTimesLastYear
+2025-04-27 06:43:48,654 - WARNING - Added missing feature: WorkLifeBalance
+2025-04-27 06:43:48,654 - WARNING - Added missing feature: YearsAtCompany
+2025-04-27 06:43:48,654 - WARNING - Added missing feature: YearsInCurrentRole
+2025-04-27 06:43:48,655 - WARNING - Added missing feature: YearsSinceLastPromotion
+2025-04-27 06:43:48,655 - WARNING - Added missing feature: YearsWithCurrManager
+2025-04-27 06:43:48,655 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-27 06:43:48,655 - WARNING - Added missing feature: BusinessTravel_Travel_Rarely
+2025-04-27 06:43:48,656 - WARNING - Added missing feature: Department_Research & Development
+2025-04-27 06:43:48,656 - WARNING - Added missing feature: Department_Sales
+2025-04-27 06:43:48,656 - WARNING - Added missing feature: EducationField_Life Sciences
+2025-04-27 06:43:48,656 - WARNING - Added missing feature: EducationField_Marketing
+2025-04-27 06:43:48,657 - WARNING - Added missing feature: EducationField_Medical
+2025-04-27 06:43:48,657 - WARNING - Added missing feature: EducationField_Other
+2025-04-27 06:43:48,657 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-27 06:43:48,657 - WARNING - Added missing feature: Gender_Male
+2025-04-27 06:43:48,658 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-27 06:43:48,658 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-27 06:43:48,658 - WARNING - Added missing feature: JobRole_Manager
+2025-04-27 06:43:48,658 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-27 06:43:48,659 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-27 06:43:48,659 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-27 06:43:48,659 - WARNING - Added missing feature: JobRole_Sales Executive
+2025-04-27 06:43:48,659 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-27 06:43:48,660 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-27 06:43:48,660 - WARNING - Added missing feature: MaritalStatus_Single
+2025-04-27 06:43:48,660 - WARNING - Added missing feature: OverTime_Yes
+2025-04-27 06:43:48,955 - INFO - Prediction successful: {'prediction': 'Yes', 'probability': 0.8502598763604174, 'confidence': 'High'}
+2025-04-27 07:22:19,780 - INFO - /home/rishabh/SPE/Employee_Attrition/backend/Attrition/services/prediction.py changed, reloading.
+2025-04-27 07:23:17,314 - INFO - /home/rishabh/SPE/Employee_Attrition/backend/Attrition/services/prediction.py changed, reloading.
+2025-04-27 07:24:33,006 - INFO - Received input data: dict_keys(['features'])
+2025-04-27 07:24:33,008 - INFO - Input data shape: (1, 34)
+2025-04-27 07:24:33,014 - WARNING - Added missing feature: Age
+2025-04-27 07:24:33,014 - WARNING - Added missing feature: DailyRate
+2025-04-27 07:24:33,014 - WARNING - Added missing feature: DistanceFromHome
+2025-04-27 07:24:33,015 - WARNING - Added missing feature: Education
+2025-04-27 07:24:33,015 - WARNING - Added missing feature: EmployeeCount
+2025-04-27 07:24:33,015 - WARNING - Added missing feature: EmployeeNumber
+2025-04-27 07:24:33,016 - WARNING - Added missing feature: EnvironmentSatisfaction
+2025-04-27 07:24:33,016 - WARNING - Added missing feature: HourlyRate
+2025-04-27 07:24:33,016 - WARNING - Added missing feature: JobInvolvement
+2025-04-27 07:24:33,016 - WARNING - Added missing feature: JobLevel
+2025-04-27 07:24:33,017 - WARNING - Added missing feature: JobSatisfaction
+2025-04-27 07:24:33,017 - WARNING - Added missing feature: MonthlyIncome
+2025-04-27 07:24:33,017 - WARNING - Added missing feature: MonthlyRate
+2025-04-27 07:24:33,017 - WARNING - Added missing feature: NumCompaniesWorked
+2025-04-27 07:24:33,018 - WARNING - Added missing feature: PercentSalaryHike
+2025-04-27 07:24:33,018 - WARNING - Added missing feature: PerformanceRating
+2025-04-27 07:24:33,018 - WARNING - Added missing feature: RelationshipSatisfaction
+2025-04-27 07:24:33,018 - WARNING - Added missing feature: StandardHours
+2025-04-27 07:24:33,019 - WARNING - Added missing feature: StockOptionLevel
+2025-04-27 07:24:33,019 - WARNING - Added missing feature: TotalWorkingYears
+2025-04-27 07:24:33,019 - WARNING - Added missing feature: TrainingTimesLastYear
+2025-04-27 07:24:33,020 - WARNING - Added missing feature: WorkLifeBalance
+2025-04-27 07:24:33,020 - WARNING - Added missing feature: YearsAtCompany
+2025-04-27 07:24:33,020 - WARNING - Added missing feature: YearsInCurrentRole
+2025-04-27 07:24:33,020 - WARNING - Added missing feature: YearsSinceLastPromotion
+2025-04-27 07:24:33,021 - WARNING - Added missing feature: YearsWithCurrManager
+2025-04-27 07:24:33,021 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-27 07:24:33,021 - WARNING - Added missing feature: BusinessTravel_Travel_Rarely
+2025-04-27 07:24:33,021 - WARNING - Added missing feature: Department_Research & Development
+2025-04-27 07:24:33,022 - WARNING - Added missing feature: Department_Sales
+2025-04-27 07:24:33,022 - WARNING - Added missing feature: EducationField_Life Sciences
+2025-04-27 07:24:33,022 - WARNING - Added missing feature: EducationField_Marketing
+2025-04-27 07:24:33,023 - WARNING - Added missing feature: EducationField_Medical
+2025-04-27 07:24:33,023 - WARNING - Added missing feature: EducationField_Other
+2025-04-27 07:24:33,023 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-27 07:24:33,023 - WARNING - Added missing feature: Gender_Male
+2025-04-27 07:24:33,024 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-27 07:24:33,024 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-27 07:24:33,024 - WARNING - Added missing feature: JobRole_Manager
+2025-04-27 07:24:33,024 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-27 07:24:33,025 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-27 07:24:33,025 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-27 07:24:33,025 - WARNING - Added missing feature: JobRole_Sales Executive
+2025-04-27 07:24:33,025 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-27 07:24:33,026 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-27 07:24:33,026 - WARNING - Added missing feature: MaritalStatus_Single
+2025-04-27 07:24:33,026 - WARNING - Added missing feature: OverTime_Yes
+2025-04-27 07:24:33,339 - INFO - Prediction successful: {'prediction': 'Yes', 'probability': 0.8502598763604174, 'confidence': 'High'}
+2025-04-27 07:24:42,497 - INFO - Received input data: dict_keys(['features'])
+2025-04-27 07:24:42,499 - INFO - Input data shape: (1, 34)
+2025-04-27 07:24:42,504 - WARNING - Added missing feature: Age
+2025-04-27 07:24:42,505 - WARNING - Added missing feature: DailyRate
+2025-04-27 07:24:42,505 - WARNING - Added missing feature: DistanceFromHome
+2025-04-27 07:24:42,505 - WARNING - Added missing feature: Education
+2025-04-27 07:24:42,505 - WARNING - Added missing feature: EmployeeCount
+2025-04-27 07:24:42,506 - WARNING - Added missing feature: EmployeeNumber
+2025-04-27 07:24:42,506 - WARNING - Added missing feature: EnvironmentSatisfaction
+2025-04-27 07:24:42,506 - WARNING - Added missing feature: HourlyRate
+2025-04-27 07:24:42,507 - WARNING - Added missing feature: JobInvolvement
+2025-04-27 07:24:42,507 - WARNING - Added missing feature: JobLevel
+2025-04-27 07:24:42,507 - WARNING - Added missing feature: JobSatisfaction
+2025-04-27 07:24:42,507 - WARNING - Added missing feature: MonthlyIncome
+2025-04-27 07:24:42,508 - WARNING - Added missing feature: MonthlyRate
+2025-04-27 07:24:42,508 - WARNING - Added missing feature: NumCompaniesWorked
+2025-04-27 07:24:42,508 - WARNING - Added missing feature: PercentSalaryHike
+2025-04-27 07:24:42,508 - WARNING - Added missing feature: PerformanceRating
+2025-04-27 07:24:42,509 - WARNING - Added missing feature: RelationshipSatisfaction
+2025-04-27 07:24:42,509 - WARNING - Added missing feature: StandardHours
+2025-04-27 07:24:42,509 - WARNING - Added missing feature: StockOptionLevel
+2025-04-27 07:24:42,509 - WARNING - Added missing feature: TotalWorkingYears
+2025-04-27 07:24:42,510 - WARNING - Added missing feature: TrainingTimesLastYear
+2025-04-27 07:24:42,510 - WARNING - Added missing feature: WorkLifeBalance
+2025-04-27 07:24:42,510 - WARNING - Added missing feature: YearsAtCompany
+2025-04-27 07:24:42,510 - WARNING - Added missing feature: YearsInCurrentRole
+2025-04-27 07:24:42,511 - WARNING - Added missing feature: YearsSinceLastPromotion
+2025-04-27 07:24:42,511 - WARNING - Added missing feature: YearsWithCurrManager
+2025-04-27 07:24:42,511 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-27 07:24:42,511 - WARNING - Added missing feature: BusinessTravel_Travel_Rarely
+2025-04-27 07:24:42,512 - WARNING - Added missing feature: Department_Research & Development
+2025-04-27 07:24:42,512 - WARNING - Added missing feature: Department_Sales
+2025-04-27 07:24:42,512 - WARNING - Added missing feature: EducationField_Life Sciences
+2025-04-27 07:24:42,513 - WARNING - Added missing feature: EducationField_Marketing
+2025-04-27 07:24:42,513 - WARNING - Added missing feature: EducationField_Medical
+2025-04-27 07:24:42,513 - WARNING - Added missing feature: EducationField_Other
+2025-04-27 07:24:42,514 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-27 07:24:42,514 - WARNING - Added missing feature: Gender_Male
+2025-04-27 07:24:42,514 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-27 07:24:42,515 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-27 07:24:42,515 - WARNING - Added missing feature: JobRole_Manager
+2025-04-27 07:24:42,515 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-27 07:24:42,515 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-27 07:24:42,516 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-27 07:24:42,516 - WARNING - Added missing feature: JobRole_Sales Executive
+2025-04-27 07:24:42,516 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-27 07:24:42,516 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-27 07:24:42,517 - WARNING - Added missing feature: MaritalStatus_Single
+2025-04-27 07:24:42,517 - WARNING - Added missing feature: OverTime_Yes
+2025-04-27 07:24:42,824 - INFO - Prediction successful: {'prediction': 'Yes', 'probability': 0.8502598763604174, 'confidence': 'High'}
+2025-04-27 07:24:48,830 - INFO - Received input data: dict_keys(['features'])
+2025-04-27 07:24:48,832 - INFO - Input data shape: (1, 34)
+2025-04-27 07:24:48,836 - WARNING - Added missing feature: Age
+2025-04-27 07:24:48,836 - WARNING - Added missing feature: DailyRate
+2025-04-27 07:24:48,837 - WARNING - Added missing feature: DistanceFromHome
+2025-04-27 07:24:48,837 - WARNING - Added missing feature: Education
+2025-04-27 07:24:48,837 - WARNING - Added missing feature: EmployeeCount
+2025-04-27 07:24:48,837 - WARNING - Added missing feature: EmployeeNumber
+2025-04-27 07:24:48,838 - WARNING - Added missing feature: EnvironmentSatisfaction
+2025-04-27 07:24:48,838 - WARNING - Added missing feature: HourlyRate
+2025-04-27 07:24:48,838 - WARNING - Added missing feature: JobInvolvement
+2025-04-27 07:24:48,838 - WARNING - Added missing feature: JobLevel
+2025-04-27 07:24:48,839 - WARNING - Added missing feature: JobSatisfaction
+2025-04-27 07:24:48,839 - WARNING - Added missing feature: MonthlyIncome
+2025-04-27 07:24:48,839 - WARNING - Added missing feature: MonthlyRate
+2025-04-27 07:24:48,839 - WARNING - Added missing feature: NumCompaniesWorked
+2025-04-27 07:24:48,840 - WARNING - Added missing feature: PercentSalaryHike
+2025-04-27 07:24:48,840 - WARNING - Added missing feature: PerformanceRating
+2025-04-27 07:24:48,840 - WARNING - Added missing feature: RelationshipSatisfaction
+2025-04-27 07:24:48,840 - WARNING - Added missing feature: StandardHours
+2025-04-27 07:24:48,841 - WARNING - Added missing feature: StockOptionLevel
+2025-04-27 07:24:48,841 - WARNING - Added missing feature: TotalWorkingYears
+2025-04-27 07:24:48,841 - WARNING - Added missing feature: TrainingTimesLastYear
+2025-04-27 07:24:48,841 - WARNING - Added missing feature: WorkLifeBalance
+2025-04-27 07:24:48,842 - WARNING - Added missing feature: YearsAtCompany
+2025-04-27 07:24:48,842 - WARNING - Added missing feature: YearsInCurrentRole
+2025-04-27 07:24:48,842 - WARNING - Added missing feature: YearsSinceLastPromotion
+2025-04-27 07:24:48,842 - WARNING - Added missing feature: YearsWithCurrManager
+2025-04-27 07:24:48,843 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-27 07:24:48,843 - WARNING - Added missing feature: BusinessTravel_Travel_Rarely
+2025-04-27 07:24:48,843 - WARNING - Added missing feature: Department_Research & Development
+2025-04-27 07:24:48,843 - WARNING - Added missing feature: Department_Sales
+2025-04-27 07:24:48,844 - WARNING - Added missing feature: EducationField_Life Sciences
+2025-04-27 07:24:48,844 - WARNING - Added missing feature: EducationField_Marketing
+2025-04-27 07:24:48,844 - WARNING - Added missing feature: EducationField_Medical
+2025-04-27 07:24:48,844 - WARNING - Added missing feature: EducationField_Other
+2025-04-27 07:24:48,845 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-27 07:24:48,845 - WARNING - Added missing feature: Gender_Male
+2025-04-27 07:24:48,845 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-27 07:24:48,845 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-27 07:24:48,846 - WARNING - Added missing feature: JobRole_Manager
+2025-04-27 07:24:48,846 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-27 07:24:48,846 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-27 07:24:48,846 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-27 07:24:48,847 - WARNING - Added missing feature: JobRole_Sales Executive
+2025-04-27 07:24:48,847 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-27 07:24:48,847 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-27 07:24:48,847 - WARNING - Added missing feature: MaritalStatus_Single
+2025-04-27 07:24:48,848 - WARNING - Added missing feature: OverTime_Yes
+2025-04-27 07:24:49,153 - INFO - Prediction successful: {'prediction': 'Yes', 'probability': 0.8502598763604174, 'confidence': 'High'}
+2025-04-27 07:25:29,731 - INFO - Received input data: dict_keys(['features'])
+2025-04-27 07:25:29,732 - INFO - Input data shape: (1, 34)
+2025-04-27 07:25:29,737 - WARNING - Added missing feature: Age
+2025-04-27 07:25:29,737 - WARNING - Added missing feature: DailyRate
+2025-04-27 07:25:29,738 - WARNING - Added missing feature: DistanceFromHome
+2025-04-27 07:25:29,738 - WARNING - Added missing feature: Education
+2025-04-27 07:25:29,738 - WARNING - Added missing feature: EmployeeCount
+2025-04-27 07:25:29,739 - WARNING - Added missing feature: EmployeeNumber
+2025-04-27 07:25:29,739 - WARNING - Added missing feature: EnvironmentSatisfaction
+2025-04-27 07:25:29,739 - WARNING - Added missing feature: HourlyRate
+2025-04-27 07:25:29,739 - WARNING - Added missing feature: JobInvolvement
+2025-04-27 07:25:29,740 - WARNING - Added missing feature: JobLevel
+2025-04-27 07:25:29,740 - WARNING - Added missing feature: JobSatisfaction
+2025-04-27 07:25:29,740 - WARNING - Added missing feature: MonthlyIncome
+2025-04-27 07:25:29,740 - WARNING - Added missing feature: MonthlyRate
+2025-04-27 07:25:29,741 - WARNING - Added missing feature: NumCompaniesWorked
+2025-04-27 07:25:29,741 - WARNING - Added missing feature: PercentSalaryHike
+2025-04-27 07:25:29,741 - WARNING - Added missing feature: PerformanceRating
+2025-04-27 07:25:29,742 - WARNING - Added missing feature: RelationshipSatisfaction
+2025-04-27 07:25:29,742 - WARNING - Added missing feature: StandardHours
+2025-04-27 07:25:29,742 - WARNING - Added missing feature: StockOptionLevel
+2025-04-27 07:25:29,742 - WARNING - Added missing feature: TotalWorkingYears
+2025-04-27 07:25:29,743 - WARNING - Added missing feature: TrainingTimesLastYear
+2025-04-27 07:25:29,743 - WARNING - Added missing feature: WorkLifeBalance
+2025-04-27 07:25:29,743 - WARNING - Added missing feature: YearsAtCompany
+2025-04-27 07:25:29,743 - WARNING - Added missing feature: YearsInCurrentRole
+2025-04-27 07:25:29,744 - WARNING - Added missing feature: YearsSinceLastPromotion
+2025-04-27 07:25:29,744 - WARNING - Added missing feature: YearsWithCurrManager
+2025-04-27 07:25:29,744 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-27 07:25:29,745 - WARNING - Added missing feature: BusinessTravel_Travel_Rarely
+2025-04-27 07:25:29,745 - WARNING - Added missing feature: Department_Research & Development
+2025-04-27 07:25:29,745 - WARNING - Added missing feature: Department_Sales
+2025-04-27 07:25:29,745 - WARNING - Added missing feature: EducationField_Life Sciences
+2025-04-27 07:25:29,746 - WARNING - Added missing feature: EducationField_Marketing
+2025-04-27 07:25:29,746 - WARNING - Added missing feature: EducationField_Medical
+2025-04-27 07:25:29,746 - WARNING - Added missing feature: EducationField_Other
+2025-04-27 07:25:29,747 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-27 07:25:29,747 - WARNING - Added missing feature: Gender_Male
+2025-04-27 07:25:29,747 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-27 07:25:29,747 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-27 07:25:29,748 - WARNING - Added missing feature: JobRole_Manager
+2025-04-27 07:25:29,748 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-27 07:25:29,748 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-27 07:25:29,748 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-27 07:25:29,749 - WARNING - Added missing feature: JobRole_Sales Executive
+2025-04-27 07:25:29,749 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-27 07:25:29,749 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-27 07:25:29,750 - WARNING - Added missing feature: MaritalStatus_Single
+2025-04-27 07:25:29,750 - WARNING - Added missing feature: OverTime_Yes
+2025-04-27 07:25:30,085 - INFO - Prediction successful: {'prediction': 'Yes', 'probability': 0.8502598763604174, 'confidence': 'High'}
+2025-04-27 07:25:38,096 - INFO - Received input data: dict_keys(['features'])
+2025-04-27 07:25:38,097 - INFO - Input data shape: (1, 34)
+2025-04-27 07:25:38,102 - WARNING - Added missing feature: Age
+2025-04-27 07:25:38,102 - WARNING - Added missing feature: DailyRate
+2025-04-27 07:25:38,103 - WARNING - Added missing feature: DistanceFromHome
+2025-04-27 07:25:38,103 - WARNING - Added missing feature: Education
+2025-04-27 07:25:38,103 - WARNING - Added missing feature: EmployeeCount
+2025-04-27 07:25:38,103 - WARNING - Added missing feature: EmployeeNumber
+2025-04-27 07:25:38,104 - WARNING - Added missing feature: EnvironmentSatisfaction
+2025-04-27 07:25:38,104 - WARNING - Added missing feature: HourlyRate
+2025-04-27 07:25:38,104 - WARNING - Added missing feature: JobInvolvement
+2025-04-27 07:25:38,104 - WARNING - Added missing feature: JobLevel
+2025-04-27 07:25:38,105 - WARNING - Added missing feature: JobSatisfaction
+2025-04-27 07:25:38,105 - WARNING - Added missing feature: MonthlyIncome
+2025-04-27 07:25:38,105 - WARNING - Added missing feature: MonthlyRate
+2025-04-27 07:25:38,105 - WARNING - Added missing feature: NumCompaniesWorked
+2025-04-27 07:25:38,106 - WARNING - Added missing feature: PercentSalaryHike
+2025-04-27 07:25:38,106 - WARNING - Added missing feature: PerformanceRating
+2025-04-27 07:25:38,106 - WARNING - Added missing feature: RelationshipSatisfaction
+2025-04-27 07:25:38,107 - WARNING - Added missing feature: StandardHours
+2025-04-27 07:25:38,107 - WARNING - Added missing feature: StockOptionLevel
+2025-04-27 07:25:38,107 - WARNING - Added missing feature: TotalWorkingYears
+2025-04-27 07:25:38,107 - WARNING - Added missing feature: TrainingTimesLastYear
+2025-04-27 07:25:38,108 - WARNING - Added missing feature: WorkLifeBalance
+2025-04-27 07:25:38,108 - WARNING - Added missing feature: YearsAtCompany
+2025-04-27 07:25:38,108 - WARNING - Added missing feature: YearsInCurrentRole
+2025-04-27 07:25:38,109 - WARNING - Added missing feature: YearsSinceLastPromotion
+2025-04-27 07:25:38,109 - WARNING - Added missing feature: YearsWithCurrManager
+2025-04-27 07:25:38,109 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-27 07:25:38,109 - WARNING - Added missing feature: BusinessTravel_Travel_Rarely
+2025-04-27 07:25:38,110 - WARNING - Added missing feature: Department_Research & Development
+2025-04-27 07:25:38,110 - WARNING - Added missing feature: Department_Sales
+2025-04-27 07:25:38,110 - WARNING - Added missing feature: EducationField_Life Sciences
+2025-04-27 07:25:38,110 - WARNING - Added missing feature: EducationField_Marketing
+2025-04-27 07:25:38,111 - WARNING - Added missing feature: EducationField_Medical
+2025-04-27 07:25:38,111 - WARNING - Added missing feature: EducationField_Other
+2025-04-27 07:25:38,111 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-27 07:25:38,111 - WARNING - Added missing feature: Gender_Male
+2025-04-27 07:25:38,112 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-27 07:25:38,112 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-27 07:25:38,112 - WARNING - Added missing feature: JobRole_Manager
+2025-04-27 07:25:38,113 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-27 07:25:38,113 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-27 07:25:38,113 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-27 07:25:38,113 - WARNING - Added missing feature: JobRole_Sales Executive
+2025-04-27 07:25:38,114 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-27 07:25:38,114 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-27 07:25:38,114 - WARNING - Added missing feature: MaritalStatus_Single
+2025-04-27 07:25:38,114 - WARNING - Added missing feature: OverTime_Yes
+2025-04-27 07:25:38,421 - INFO - Prediction successful: {'prediction': 'Yes', 'probability': 0.8502598763604174, 'confidence': 'High'}
+2025-04-27 07:30:41,530 - INFO - /home/rishabh/SPE/Employee_Attrition/backend/Attrition/services/prediction.py changed, reloading.
+2025-04-27 07:31:20,480 - INFO - Received input data: dict_keys(['features'])
+2025-04-27 07:31:20,482 - INFO - Input data shape: (1, 34)
+2025-04-27 07:31:20,487 - WARNING - Added missing feature: Age
+2025-04-27 07:31:20,487 - WARNING - Added missing feature: DailyRate
+2025-04-27 07:31:20,488 - WARNING - Added missing feature: DistanceFromHome
+2025-04-27 07:31:20,488 - WARNING - Added missing feature: Education
+2025-04-27 07:31:20,488 - WARNING - Added missing feature: EmployeeCount
+2025-04-27 07:31:20,488 - WARNING - Added missing feature: EmployeeNumber
+2025-04-27 07:31:20,489 - WARNING - Added missing feature: EnvironmentSatisfaction
+2025-04-27 07:31:20,489 - WARNING - Added missing feature: HourlyRate
+2025-04-27 07:31:20,489 - WARNING - Added missing feature: JobInvolvement
+2025-04-27 07:31:20,489 - WARNING - Added missing feature: JobLevel
+2025-04-27 07:31:20,490 - WARNING - Added missing feature: JobSatisfaction
+2025-04-27 07:31:20,490 - WARNING - Added missing feature: MonthlyIncome
+2025-04-27 07:31:20,490 - WARNING - Added missing feature: MonthlyRate
+2025-04-27 07:31:20,491 - WARNING - Added missing feature: NumCompaniesWorked
+2025-04-27 07:31:20,491 - WARNING - Added missing feature: PercentSalaryHike
+2025-04-27 07:31:20,491 - WARNING - Added missing feature: PerformanceRating
+2025-04-27 07:31:20,491 - WARNING - Added missing feature: RelationshipSatisfaction
+2025-04-27 07:31:20,492 - WARNING - Added missing feature: StandardHours
+2025-04-27 07:31:20,492 - WARNING - Added missing feature: StockOptionLevel
+2025-04-27 07:31:20,492 - WARNING - Added missing feature: TotalWorkingYears
+2025-04-27 07:31:20,492 - WARNING - Added missing feature: TrainingTimesLastYear
+2025-04-27 07:31:20,493 - WARNING - Added missing feature: WorkLifeBalance
+2025-04-27 07:31:20,493 - WARNING - Added missing feature: YearsAtCompany
+2025-04-27 07:31:20,493 - WARNING - Added missing feature: YearsInCurrentRole
+2025-04-27 07:31:20,494 - WARNING - Added missing feature: YearsSinceLastPromotion
+2025-04-27 07:31:20,494 - WARNING - Added missing feature: YearsWithCurrManager
+2025-04-27 07:31:20,494 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-27 07:31:20,494 - WARNING - Added missing feature: BusinessTravel_Travel_Rarely
+2025-04-27 07:31:20,495 - WARNING - Added missing feature: Department_Research & Development
+2025-04-27 07:31:20,495 - WARNING - Added missing feature: Department_Sales
+2025-04-27 07:31:20,495 - WARNING - Added missing feature: EducationField_Life Sciences
+2025-04-27 07:31:20,495 - WARNING - Added missing feature: EducationField_Marketing
+2025-04-27 07:31:20,496 - WARNING - Added missing feature: EducationField_Medical
+2025-04-27 07:31:20,496 - WARNING - Added missing feature: EducationField_Other
+2025-04-27 07:31:20,496 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-27 07:31:20,496 - WARNING - Added missing feature: Gender_Male
+2025-04-27 07:31:20,497 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-27 07:31:20,497 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-27 07:31:20,497 - WARNING - Added missing feature: JobRole_Manager
+2025-04-27 07:31:20,498 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-27 07:31:20,498 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-27 07:31:20,498 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-27 07:31:20,498 - WARNING - Added missing feature: JobRole_Sales Executive
+2025-04-27 07:31:20,499 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-27 07:31:20,499 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-27 07:31:20,499 - WARNING - Added missing feature: MaritalStatus_Single
+2025-04-27 07:31:20,499 - WARNING - Added missing feature: OverTime_Yes
+2025-04-27 07:31:20,829 - INFO - Prediction successful: {'prediction': 'Yes', 'probability': 0.8502598763604174, 'confidence': 'High'}
+2025-04-27 07:31:24,585 - INFO - Received input data: dict_keys(['features'])
+2025-04-27 07:31:24,586 - INFO - Input data shape: (1, 34)
+2025-04-27 07:31:24,591 - WARNING - Added missing feature: Age
+2025-04-27 07:31:24,591 - WARNING - Added missing feature: DailyRate
+2025-04-27 07:31:24,592 - WARNING - Added missing feature: DistanceFromHome
+2025-04-27 07:31:24,592 - WARNING - Added missing feature: Education
+2025-04-27 07:31:24,592 - WARNING - Added missing feature: EmployeeCount
+2025-04-27 07:31:24,592 - WARNING - Added missing feature: EmployeeNumber
+2025-04-27 07:31:24,593 - WARNING - Added missing feature: EnvironmentSatisfaction
+2025-04-27 07:31:24,593 - WARNING - Added missing feature: HourlyRate
+2025-04-27 07:31:24,593 - WARNING - Added missing feature: JobInvolvement
+2025-04-27 07:31:24,594 - WARNING - Added missing feature: JobLevel
+2025-04-27 07:31:24,594 - WARNING - Added missing feature: JobSatisfaction
+2025-04-27 07:31:24,594 - WARNING - Added missing feature: MonthlyIncome
+2025-04-27 07:31:24,594 - WARNING - Added missing feature: MonthlyRate
+2025-04-27 07:31:24,595 - WARNING - Added missing feature: NumCompaniesWorked
+2025-04-27 07:31:24,595 - WARNING - Added missing feature: PercentSalaryHike
+2025-04-27 07:31:24,595 - WARNING - Added missing feature: PerformanceRating
+2025-04-27 07:31:24,595 - WARNING - Added missing feature: RelationshipSatisfaction
+2025-04-27 07:31:24,596 - WARNING - Added missing feature: StandardHours
+2025-04-27 07:31:24,596 - WARNING - Added missing feature: StockOptionLevel
+2025-04-27 07:31:24,596 - WARNING - Added missing feature: TotalWorkingYears
+2025-04-27 07:31:24,596 - WARNING - Added missing feature: TrainingTimesLastYear
+2025-04-27 07:31:24,597 - WARNING - Added missing feature: WorkLifeBalance
+2025-04-27 07:31:24,597 - WARNING - Added missing feature: YearsAtCompany
+2025-04-27 07:31:24,597 - WARNING - Added missing feature: YearsInCurrentRole
+2025-04-27 07:31:24,597 - WARNING - Added missing feature: YearsSinceLastPromotion
+2025-04-27 07:31:24,598 - WARNING - Added missing feature: YearsWithCurrManager
+2025-04-27 07:31:24,598 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-27 07:31:24,598 - WARNING - Added missing feature: BusinessTravel_Travel_Rarely
+2025-04-27 07:31:24,598 - WARNING - Added missing feature: Department_Research & Development
+2025-04-27 07:31:24,599 - WARNING - Added missing feature: Department_Sales
+2025-04-27 07:31:24,599 - WARNING - Added missing feature: EducationField_Life Sciences
+2025-04-27 07:31:24,599 - WARNING - Added missing feature: EducationField_Marketing
+2025-04-27 07:31:24,599 - WARNING - Added missing feature: EducationField_Medical
+2025-04-27 07:31:24,600 - WARNING - Added missing feature: EducationField_Other
+2025-04-27 07:31:24,600 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-27 07:31:24,600 - WARNING - Added missing feature: Gender_Male
+2025-04-27 07:31:24,600 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-27 07:31:24,601 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-27 07:31:24,601 - WARNING - Added missing feature: JobRole_Manager
+2025-04-27 07:31:24,601 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-27 07:31:24,601 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-27 07:31:24,602 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-27 07:31:24,602 - WARNING - Added missing feature: JobRole_Sales Executive
+2025-04-27 07:31:24,602 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-27 07:31:24,602 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-27 07:31:24,603 - WARNING - Added missing feature: MaritalStatus_Single
+2025-04-27 07:31:24,603 - WARNING - Added missing feature: OverTime_Yes
+2025-04-27 07:31:24,900 - INFO - Prediction successful: {'prediction': 'Yes', 'probability': 0.8502598763604174, 'confidence': 'High'}
+2025-04-27 07:32:54,104 - INFO - /home/rishabh/SPE/Employee_Attrition/backend/Attrition/services/prediction.py changed, reloading.
+2025-04-29 04:35:50,293 - INFO - /home/rishabh/SPE/Employee_Attrition/backend/Attrition/urls.py changed, reloading.
+2025-04-29 04:36:15,534 - INFO - /home/rishabh/SPE/Employee_Attrition/backend/Attrition/views.py changed, reloading.
+2025-04-29 04:37:35,673 - INFO - Loading data from database...
+2025-04-29 04:37:35,713 - INFO - Preprocessing data...
+2025-04-29 04:37:35,728 - INFO - Training model with parameters: {'n_estimators': 1000, 'max_depth': 4, 'min_samples_leaf': 2}
+2025-04-29 04:37:37,970 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.92      0.89      0.90       255
+           1       0.40      0.46      0.43        39
+
+    accuracy                           0.84       294
+   macro avg       0.66      0.68      0.67       294
+weighted avg       0.85      0.84      0.84       294
+
+2025-04-29 04:37:37,973 - INFO - Confusion Matrix:
+[[228  27]
+ [ 21  18]]
+2025-04-29 04:37:37,973 - INFO - Accuracy: 0.8367
+2025-04-29 04:37:37,973 - INFO - Precision: 0.8473
+2025-04-29 04:37:37,973 - INFO - Recall: 0.8367
+2025-04-29 04:37:37,973 - INFO - F1_score: 0.8416
+2025-04-29 04:37:38,004 - INFO - Model saved successfully as model_1b218af9-93c1-423f-8970-f217fede8bbc.sav
+2025-04-29 04:37:38,004 - INFO - Training completed successfully
+2025-04-29 04:38:18,646 - INFO - Received prediction request for model 1b218af9-93c1-423f-8970-f217fede8bbc
+2025-04-29 04:38:18,682 - INFO - Input data shape: (1, 34)
+2025-04-29 04:38:18,688 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-29 04:38:18,688 - WARNING - Added missing feature: Department_Research & Development
+2025-04-29 04:38:18,688 - WARNING - Added missing feature: Department_Sales
+2025-04-29 04:38:18,688 - WARNING - Added missing feature: EducationField_Marketing
+2025-04-29 04:38:18,689 - WARNING - Added missing feature: EducationField_Medical
+2025-04-29 04:38:18,689 - WARNING - Added missing feature: EducationField_Other
+2025-04-29 04:38:18,689 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-29 04:38:18,690 - WARNING - Added missing feature: Gender_Male
+2025-04-29 04:38:18,690 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-29 04:38:18,690 - WARNING - Added missing feature: JobRole_Manager
+2025-04-29 04:38:18,690 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-29 04:38:18,691 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-29 04:38:18,691 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-29 04:38:18,691 - WARNING - Added missing feature: JobRole_Sales Executive
+2025-04-29 04:38:18,692 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-29 04:38:18,692 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-29 04:38:18,997 - INFO - Prediction successful: {'prediction': 'No', 'probability': 0.3664966398452019, 'confidence': 'Low', 'model_id': '1b218af9-93c1-423f-8970-f217fede8bbc'}
+2025-04-29 04:38:31,076 - INFO - Received prediction request for model 1b218af9-93c1-423f-8970-f217fede8bbc
+2025-04-29 04:38:31,106 - INFO - Input data shape: (1, 34)
+2025-04-29 04:38:31,111 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-29 04:38:31,111 - WARNING - Added missing feature: Department_Research & Development
+2025-04-29 04:38:31,112 - WARNING - Added missing feature: EducationField_Marketing
+2025-04-29 04:38:31,112 - WARNING - Added missing feature: EducationField_Medical
+2025-04-29 04:38:31,112 - WARNING - Added missing feature: EducationField_Other
+2025-04-29 04:38:31,112 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-29 04:38:31,113 - WARNING - Added missing feature: Gender_Male
+2025-04-29 04:38:31,113 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-29 04:38:31,113 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-29 04:38:31,113 - WARNING - Added missing feature: JobRole_Manager
+2025-04-29 04:38:31,114 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-29 04:38:31,114 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-29 04:38:31,114 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-29 04:38:31,115 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-29 04:38:31,115 - WARNING - Added missing feature: MaritalStatus_Single
+2025-04-29 04:38:31,115 - WARNING - Added missing feature: OverTime_Yes
+2025-04-29 04:38:31,435 - INFO - Prediction successful: {'prediction': 'No', 'probability': 0.19964021761589254, 'confidence': 'High', 'model_id': '1b218af9-93c1-423f-8970-f217fede8bbc'}
+2025-04-29 04:38:41,269 - INFO - Received prediction request for model 1b218af9-93c1-423f-8970-f217fede8bbc
+2025-04-29 04:38:41,299 - INFO - Input data shape: (1, 34)
+2025-04-29 04:38:41,304 - WARNING - Added missing feature: BusinessTravel_Travel_Rarely
+2025-04-29 04:38:41,305 - WARNING - Added missing feature: Department_Research & Development
+2025-04-29 04:38:41,305 - WARNING - Added missing feature: EducationField_Marketing
+2025-04-29 04:38:41,305 - WARNING - Added missing feature: EducationField_Medical
+2025-04-29 04:38:41,306 - WARNING - Added missing feature: EducationField_Other
+2025-04-29 04:38:41,306 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-29 04:38:41,306 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-29 04:38:41,307 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-29 04:38:41,307 - WARNING - Added missing feature: JobRole_Manager
+2025-04-29 04:38:41,307 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-29 04:38:41,308 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-29 04:38:41,308 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-29 04:38:41,308 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-29 04:38:41,308 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-29 04:38:41,309 - WARNING - Added missing feature: MaritalStatus_Single
+2025-04-29 04:38:41,309 - WARNING - Added missing feature: OverTime_Yes
+2025-04-29 04:38:41,644 - INFO - Prediction successful: {'prediction': 'No', 'probability': 0.3795939587928616, 'confidence': 'Low', 'model_id': '1b218af9-93c1-423f-8970-f217fede8bbc'}
+2025-04-29 04:38:52,914 - INFO - Received prediction request for model 1b218af9-93c1-423f-8970-f217fede8bbc
+2025-04-29 04:38:52,942 - INFO - Input data shape: (1, 34)
+2025-04-29 04:38:52,947 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-29 04:38:52,948 - WARNING - Added missing feature: Department_Research & Development
+2025-04-29 04:38:52,948 - WARNING - Added missing feature: EducationField_Life Sciences
+2025-04-29 04:38:52,948 - WARNING - Added missing feature: EducationField_Medical
+2025-04-29 04:38:52,949 - WARNING - Added missing feature: EducationField_Other
+2025-04-29 04:38:52,949 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-29 04:38:52,949 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-29 04:38:52,949 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-29 04:38:52,950 - WARNING - Added missing feature: JobRole_Manager
+2025-04-29 04:38:52,950 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-29 04:38:52,950 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-29 04:38:52,950 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-29 04:38:52,951 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-29 04:38:52,951 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-29 04:38:52,951 - WARNING - Added missing feature: MaritalStatus_Single
+2025-04-29 04:38:53,285 - INFO - Prediction successful: {'prediction': 'No', 'probability': 0.46888951245626165, 'confidence': 'Low', 'model_id': '1b218af9-93c1-423f-8970-f217fede8bbc'}
+2025-04-29 04:39:36,447 - INFO - Loading data from database...
+2025-04-29 04:39:36,475 - INFO - Preprocessing data...
+2025-04-29 04:39:36,488 - INFO - Training model with parameters: {'n_estimators': 1100, 'max_depth': 4, 'min_samples_leaf': 2}
+2025-04-29 04:39:38,889 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.92      0.89      0.90       255
+           1       0.40      0.46      0.43        39
+
+    accuracy                           0.84       294
+   macro avg       0.66      0.68      0.67       294
+weighted avg       0.85      0.84      0.84       294
+
+2025-04-29 04:39:38,890 - INFO - Confusion Matrix:
+[[228  27]
+ [ 21  18]]
+2025-04-29 04:39:38,890 - INFO - Accuracy: 0.8367
+2025-04-29 04:39:38,890 - INFO - Precision: 0.8473
+2025-04-29 04:39:38,890 - INFO - Recall: 0.8367
+2025-04-29 04:39:38,890 - INFO - F1_score: 0.8416
+2025-04-29 04:39:38,922 - INFO - Model saved successfully as model_2f49f2d1-2b4f-45cb-a044-ab7905d7dca2.sav
+2025-04-29 04:39:38,922 - INFO - Training completed successfully
+2025-04-29 04:40:05,978 - INFO - Received prediction request for model 2f49f2d1-2b4f-45cb-a044-ab7905d7dca2
+2025-04-29 04:40:06,018 - INFO - Input data shape: (1, 34)
+2025-04-29 04:40:06,023 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-29 04:40:06,024 - WARNING - Added missing feature: Department_Research & Development
+2025-04-29 04:40:06,024 - WARNING - Added missing feature: EducationField_Marketing
+2025-04-29 04:40:06,024 - WARNING - Added missing feature: EducationField_Medical
+2025-04-29 04:40:06,025 - WARNING - Added missing feature: EducationField_Other
+2025-04-29 04:40:06,025 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-29 04:40:06,025 - WARNING - Added missing feature: Gender_Male
+2025-04-29 04:40:06,025 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-29 04:40:06,026 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-29 04:40:06,026 - WARNING - Added missing feature: JobRole_Manager
+2025-04-29 04:40:06,026 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-29 04:40:06,026 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-29 04:40:06,027 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-29 04:40:06,027 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-29 04:40:06,027 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-29 04:40:06,028 - WARNING - Added missing feature: OverTime_Yes
+2025-04-29 04:40:06,360 - INFO - Prediction successful: {'prediction': 'No', 'probability': 0.454815024105464, 'confidence': 'Low', 'model_id': '2f49f2d1-2b4f-45cb-a044-ab7905d7dca2'}
+2025-04-29 04:40:12,743 - INFO - Received prediction request for model 1b218af9-93c1-423f-8970-f217fede8bbc
+2025-04-29 04:40:12,775 - INFO - Input data shape: (1, 34)
+2025-04-29 04:40:12,780 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-29 04:40:12,780 - WARNING - Added missing feature: Department_Research & Development
+2025-04-29 04:40:12,781 - WARNING - Added missing feature: EducationField_Life Sciences
+2025-04-29 04:40:12,781 - WARNING - Added missing feature: EducationField_Medical
+2025-04-29 04:40:12,781 - WARNING - Added missing feature: EducationField_Other
+2025-04-29 04:40:12,782 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-29 04:40:12,782 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-29 04:40:12,782 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-29 04:40:12,782 - WARNING - Added missing feature: JobRole_Manager
+2025-04-29 04:40:12,783 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-29 04:40:12,783 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-29 04:40:12,783 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-29 04:40:12,783 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-29 04:40:12,784 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-29 04:40:12,784 - WARNING - Added missing feature: MaritalStatus_Single
+2025-04-29 04:40:13,104 - INFO - Prediction successful: {'prediction': 'No', 'probability': 0.46888951245626165, 'confidence': 'Low', 'model_id': '1b218af9-93c1-423f-8970-f217fede8bbc'}
+2025-04-29 04:40:16,223 - INFO - Received prediction request for model 2f49f2d1-2b4f-45cb-a044-ab7905d7dca2
+2025-04-29 04:40:16,257 - INFO - Input data shape: (1, 34)
+2025-04-29 04:40:16,263 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-29 04:40:16,264 - WARNING - Added missing feature: Department_Research & Development
+2025-04-29 04:40:16,264 - WARNING - Added missing feature: EducationField_Life Sciences
+2025-04-29 04:40:16,264 - WARNING - Added missing feature: EducationField_Medical
+2025-04-29 04:40:16,264 - WARNING - Added missing feature: EducationField_Other
+2025-04-29 04:40:16,265 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-29 04:40:16,265 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-29 04:40:16,265 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-29 04:40:16,265 - WARNING - Added missing feature: JobRole_Manager
+2025-04-29 04:40:16,266 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-29 04:40:16,266 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-29 04:40:16,266 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-29 04:40:16,267 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-29 04:40:16,267 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-29 04:40:16,267 - WARNING - Added missing feature: MaritalStatus_Single
+2025-04-29 04:40:16,647 - INFO - Prediction successful: {'prediction': 'No', 'probability': 0.4680103816843103, 'confidence': 'Low', 'model_id': '2f49f2d1-2b4f-45cb-a044-ab7905d7dca2'}
+2025-04-29 04:40:20,585 - INFO - Received prediction request for model 1b218af9-93c1-423f-8970-f217fede8bbc
+2025-04-29 04:40:20,617 - INFO - Input data shape: (1, 34)
+2025-04-29 04:40:20,623 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-29 04:40:20,623 - WARNING - Added missing feature: Department_Research & Development
+2025-04-29 04:40:20,623 - WARNING - Added missing feature: EducationField_Life Sciences
+2025-04-29 04:40:20,624 - WARNING - Added missing feature: EducationField_Medical
+2025-04-29 04:40:20,624 - WARNING - Added missing feature: EducationField_Other
+2025-04-29 04:40:20,624 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-29 04:40:20,624 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-29 04:40:20,625 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-29 04:40:20,625 - WARNING - Added missing feature: JobRole_Manager
+2025-04-29 04:40:20,625 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-29 04:40:20,625 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-29 04:40:20,626 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-29 04:40:20,626 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-29 04:40:20,626 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-29 04:40:20,627 - WARNING - Added missing feature: MaritalStatus_Single
+2025-04-29 04:40:20,955 - INFO - Prediction successful: {'prediction': 'No', 'probability': 0.46888951245626165, 'confidence': 'Low', 'model_id': '1b218af9-93c1-423f-8970-f217fede8bbc'}
+2025-04-29 04:46:09,427 - INFO - Loading data from database...
+2025-04-29 04:46:09,454 - INFO - Preprocessing data...
+2025-04-29 04:46:09,467 - INFO - Training model with parameters: {'n_estimators': 1000, 'max_depth': 5, 'min_samples_leaf': 2}
+2025-04-29 04:46:11,753 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.92      0.90      0.91       255
+           1       0.42      0.46      0.44        39
+
+    accuracy                           0.84       294
+   macro avg       0.67      0.68      0.67       294
+weighted avg       0.85      0.84      0.85       294
+
+2025-04-29 04:46:11,754 - INFO - Confusion Matrix:
+[[230  25]
+ [ 21  18]]
+2025-04-29 04:46:11,754 - INFO - Accuracy: 0.8435
+2025-04-29 04:46:11,754 - INFO - Precision: 0.8503
+2025-04-29 04:46:11,754 - INFO - Recall: 0.8435
+2025-04-29 04:46:11,754 - INFO - F1_score: 0.8467
+2025-04-29 04:46:11,786 - INFO - Model saved successfully as model_156f22f1-ffd0-4ab8-8403-2a3b5dae805b.sav
+2025-04-29 04:46:11,786 - INFO - Training completed successfully
+2025-04-29 04:46:26,047 - INFO - Received prediction request for model 156f22f1-ffd0-4ab8-8403-2a3b5dae805b
+2025-04-29 04:46:26,083 - INFO - Input data shape: (1, 34)
+2025-04-29 04:46:26,089 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-29 04:46:26,090 - WARNING - Added missing feature: Department_Research & Development
+2025-04-29 04:46:26,090 - WARNING - Added missing feature: EducationField_Life Sciences
+2025-04-29 04:46:26,090 - WARNING - Added missing feature: EducationField_Medical
+2025-04-29 04:46:26,091 - WARNING - Added missing feature: EducationField_Other
+2025-04-29 04:46:26,091 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-29 04:46:26,091 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-29 04:46:26,091 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-29 04:46:26,092 - WARNING - Added missing feature: JobRole_Manager
+2025-04-29 04:46:26,092 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-29 04:46:26,092 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-29 04:46:26,092 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-29 04:46:26,093 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-29 04:46:26,093 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-29 04:46:26,093 - WARNING - Added missing feature: MaritalStatus_Single
+2025-04-29 04:46:26,434 - INFO - Prediction successful: {'prediction': 'No', 'probability': 0.4921134455479945, 'confidence': 'Low', 'model_id': '156f22f1-ffd0-4ab8-8403-2a3b5dae805b'}
+2025-04-29 05:09:39,080 - INFO - Loading data from database...
+2025-04-29 05:09:39,106 - INFO - Preprocessing data...
+2025-04-29 05:09:39,120 - INFO - Training model with parameters: {'n_estimators': 1000, 'max_depth': 3, 'min_samples_leaf': 2}
+2025-04-29 05:09:41,362 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.92      0.87      0.89       255
+           1       0.36      0.49      0.41        39
+
+    accuracy                           0.82       294
+   macro avg       0.64      0.68      0.65       294
+weighted avg       0.84      0.82      0.83       294
+
+2025-04-29 05:09:41,363 - INFO - Confusion Matrix:
+[[221  34]
+ [ 20  19]]
+2025-04-29 05:09:41,363 - INFO - Accuracy: 0.8163
+2025-04-29 05:09:41,363 - INFO - Precision: 0.8429
+2025-04-29 05:09:41,363 - INFO - Recall: 0.8163
+2025-04-29 05:09:41,363 - INFO - F1_score: 0.8277
+2025-04-29 05:09:41,465 - INFO - Model saved successfully as model_42ccd910-71db-4d3f-9a0b-82648788f12b.sav
+2025-04-29 05:09:41,465 - INFO - Training completed successfully
+2025-04-29 05:09:58,433 - INFO - Loading data from database...
+2025-04-29 05:09:58,461 - INFO - Preprocessing data...
+2025-04-29 05:09:58,473 - INFO - Training model with parameters: {'n_estimators': 1000, 'max_depth': 6, 'min_samples_leaf': 2}
+2025-04-29 05:10:00,699 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.92      0.92      0.92       255
+           1       0.49      0.49      0.49        39
+
+    accuracy                           0.86       294
+   macro avg       0.70      0.70      0.70       294
+weighted avg       0.86      0.86      0.86       294
+
+2025-04-29 05:10:00,700 - INFO - Confusion Matrix:
+[[235  20]
+ [ 20  19]]
+2025-04-29 05:10:00,700 - INFO - Accuracy: 0.8639
+2025-04-29 05:10:00,700 - INFO - Precision: 0.8639
+2025-04-29 05:10:00,700 - INFO - Recall: 0.8639
+2025-04-29 05:10:00,701 - INFO - F1_score: 0.8639
+2025-04-29 05:10:00,745 - INFO - Model saved successfully as model_b6b777c4-6732-49fd-80bc-97315c887457.sav
+2025-04-29 05:10:00,745 - INFO - Training completed successfully
+2025-04-29 05:10:34,209 - INFO - Received prediction request for model b6b777c4-6732-49fd-80bc-97315c887457
+2025-04-29 05:10:34,251 - INFO - Input data shape: (1, 34)
+2025-04-29 05:10:34,257 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-29 05:10:34,258 - WARNING - Added missing feature: Department_Research & Development
+2025-04-29 05:10:34,258 - WARNING - Added missing feature: EducationField_Marketing
+2025-04-29 05:10:34,258 - WARNING - Added missing feature: EducationField_Medical
+2025-04-29 05:10:34,258 - WARNING - Added missing feature: EducationField_Other
+2025-04-29 05:10:34,259 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-29 05:10:34,259 - WARNING - Added missing feature: Gender_Male
+2025-04-29 05:10:34,259 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-29 05:10:34,260 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-29 05:10:34,260 - WARNING - Added missing feature: JobRole_Manager
+2025-04-29 05:10:34,260 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-29 05:10:34,260 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-29 05:10:34,261 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-29 05:10:34,261 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-29 05:10:34,261 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-29 05:10:34,262 - WARNING - Added missing feature: OverTime_Yes
+2025-04-29 05:10:34,574 - INFO - Prediction successful: {'prediction': 'No', 'probability': 0.4174951052086395, 'confidence': 'Low', 'model_id': 'b6b777c4-6732-49fd-80bc-97315c887457'}
+2025-04-29 05:11:18,175 - INFO - Received prediction request for model b6b777c4-6732-49fd-80bc-97315c887457
+2025-04-29 05:11:18,204 - INFO - Input data shape: (1, 34)
+2025-04-29 05:11:18,209 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-29 05:11:18,209 - WARNING - Added missing feature: Department_Research & Development
+2025-04-29 05:11:18,209 - WARNING - Added missing feature: EducationField_Life Sciences
+2025-04-29 05:11:18,210 - WARNING - Added missing feature: EducationField_Medical
+2025-04-29 05:11:18,210 - WARNING - Added missing feature: EducationField_Other
+2025-04-29 05:11:18,210 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-29 05:11:18,211 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-29 05:11:18,211 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-29 05:11:18,211 - WARNING - Added missing feature: JobRole_Manager
+2025-04-29 05:11:18,211 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-29 05:11:18,212 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-29 05:11:18,212 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-29 05:11:18,212 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-29 05:11:18,213 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-29 05:11:18,213 - WARNING - Added missing feature: MaritalStatus_Single
+2025-04-29 05:11:18,552 - INFO - Prediction successful: {'prediction': 'Yes', 'probability': 0.5304972589990696, 'confidence': 'Low', 'model_id': 'b6b777c4-6732-49fd-80bc-97315c887457'}
+2025-04-30 06:48:54,288 - INFO - Received prediction request for model b6b777c4-6732-49fd-80bc-97315c887457
+2025-04-30 06:48:54,332 - INFO - Input data shape: (1, 34)
+2025-04-30 06:48:54,337 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-30 06:48:54,338 - WARNING - Added missing feature: Department_Research & Development
+2025-04-30 06:48:54,338 - WARNING - Added missing feature: EducationField_Life Sciences
+2025-04-30 06:48:54,338 - WARNING - Added missing feature: EducationField_Medical
+2025-04-30 06:48:54,338 - WARNING - Added missing feature: EducationField_Other
+2025-04-30 06:48:54,338 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-30 06:48:54,338 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-30 06:48:54,339 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-30 06:48:54,339 - WARNING - Added missing feature: JobRole_Manager
+2025-04-30 06:48:54,339 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-30 06:48:54,339 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-30 06:48:54,339 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-04-30 06:48:54,339 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-30 06:48:54,339 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-30 06:48:54,340 - WARNING - Added missing feature: MaritalStatus_Single
+2025-04-30 06:48:54,528 - INFO - Prediction successful: {'prediction': 'Yes', 'probability': 0.5304972589990696, 'confidence': 'Low', 'model_id': 'b6b777c4-6732-49fd-80bc-97315c887457'}
+2025-04-30 08:04:49,322 - INFO - /home/rishabh/SPE/Employee_Attrition/backend/Attrition/views.py changed, reloading.
+2025-04-30 08:11:12,416 - INFO - /home/rishabh/SPE/Employee_Attrition/backend/Attrition/serializers.py changed, reloading.
+2025-04-30 11:23:44,510 - INFO - /home/rishabh/SPE/Employee_Attrition/backend/Attrition/urls.py changed, reloading.
+2025-04-30 11:24:04,340 - INFO - /home/rishabh/SPE/Employee_Attrition/backend/Attrition/urls.py changed, reloading.
+2025-04-30 11:24:48,794 - INFO - /home/rishabh/SPE/Employee_Attrition/backend/Attrition/views.py changed, reloading.
+2025-04-30 11:25:20,952 - INFO - /home/rishabh/SPE/Employee_Attrition/backend/Attrition/views.py changed, reloading.
+2025-04-30 11:28:36,418 - INFO - /home/rishabh/SPE/Employee_Attrition/backend/Attrition/serializers.py changed, reloading.
+2025-04-30 11:29:15,701 - INFO - /home/rishabh/SPE/Employee_Attrition/backend/Attrition/views.py changed, reloading.
+2025-04-30 11:48:50,705 - INFO - /home/rishabh/SPE/Employee_Attrition/backend/Attrition/serializers.py changed, reloading.
+2025-04-30 11:49:12,787 - INFO - /home/rishabh/SPE/Employee_Attrition/backend/Attrition/views.py changed, reloading.
+2025-04-30 11:56:31,436 - INFO - Received prediction request for model b6b777c4-6732-49fd-80bc-97315c887457
+2025-04-30 11:56:31,629 - INFO - Input data shape: (1, 35)
+2025-04-30 11:56:31,635 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-04-30 11:56:31,636 - WARNING - Added missing feature: BusinessTravel_Travel_Rarely
+2025-04-30 11:56:31,636 - WARNING - Added missing feature: Department_Sales
+2025-04-30 11:56:31,636 - WARNING - Added missing feature: EducationField_Marketing
+2025-04-30 11:56:31,636 - WARNING - Added missing feature: EducationField_Medical
+2025-04-30 11:56:31,637 - WARNING - Added missing feature: EducationField_Other
+2025-04-30 11:56:31,637 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-04-30 11:56:31,637 - WARNING - Added missing feature: JobRole_Human Resources
+2025-04-30 11:56:31,637 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-04-30 11:56:31,638 - WARNING - Added missing feature: JobRole_Manager
+2025-04-30 11:56:31,638 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-04-30 11:56:31,638 - WARNING - Added missing feature: JobRole_Research Director
+2025-04-30 11:56:31,639 - WARNING - Added missing feature: JobRole_Sales Executive
+2025-04-30 11:56:31,639 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-04-30 11:56:31,639 - WARNING - Added missing feature: MaritalStatus_Married
+2025-04-30 11:56:31,639 - WARNING - Added missing feature: OverTime_Yes
+2025-04-30 11:56:31,989 - INFO - Prediction successful: {'prediction': 'Yes', 'probability': 0.5815918917861412, 'confidence': 'Low', 'model_id': 'b6b777c4-6732-49fd-80bc-97315c887457'}
+2025-05-15 12:43:03,981 - WARNING - Not Found: /
+2025-05-15 12:43:04,041 - WARNING - Not Found: /favicon.ico
+2025-05-15 12:47:34,177 - INFO - Loading data from database...
+2025-05-15 12:47:34,229 - INFO - Preprocessing data...
+2025-05-15 12:47:34,239 - INFO - Training model with parameters: {'n_estimators': 1000, 'max_depth': 4, 'min_samples_leaf': 2}
+2025-05-15 12:47:34,243 - ERROR - Exception during training: Input y contains NaN.
+Traceback (most recent call last):
+  File "/home/siddhesh/Employee_Attrition (1)/Employee_Attrition/backend/Attrition/services/training.py", line 196, in train
+    model, metrics, final_params = self.train_model(
+  File "/home/siddhesh/Employee_Attrition (1)/Employee_Attrition/backend/Attrition/services/training.py", line 86, in train_model
+    smote_train, smote_target = smote.fit_resample(train_data, train_target)
+  File "/home/siddhesh/.local/lib/python3.10/site-packages/imblearn/base.py", line 202, in fit_resample
+    return super().fit_resample(X, y, **params)
+  File "/home/siddhesh/.local/lib/python3.10/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/siddhesh/.local/lib/python3.10/site-packages/imblearn/base.py", line 97, in fit_resample
+    check_classification_targets(y)
+  File "/home/siddhesh/.local/lib/python3.10/site-packages/sklearn/utils/multiclass.py", line 214, in check_classification_targets
+    y_type = type_of_target(y, input_name="y")
+  File "/home/siddhesh/.local/lib/python3.10/site-packages/sklearn/utils/multiclass.py", line 417, in type_of_target
+    _assert_all_finite(data, input_name=input_name)
+  File "/home/siddhesh/.local/lib/python3.10/site-packages/sklearn/utils/validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/home/siddhesh/.local/lib/python3.10/site-packages/sklearn/utils/validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input y contains NaN.
+2025-05-15 12:47:34,255 - ERROR - Internal Server Error: /training/
+2025-05-15 12:47:44,584 - INFO - Loading data from database...
+2025-05-15 12:47:44,609 - INFO - Preprocessing data...
+2025-05-15 12:47:44,617 - INFO - Training model with parameters: {'n_estimators': 1000, 'max_depth': 4, 'min_samples_leaf': 2}
+2025-05-15 12:47:44,618 - ERROR - Exception during training: Input y contains NaN.
+Traceback (most recent call last):
+  File "/home/siddhesh/Employee_Attrition (1)/Employee_Attrition/backend/Attrition/services/training.py", line 196, in train
+    model, metrics, final_params = self.train_model(
+  File "/home/siddhesh/Employee_Attrition (1)/Employee_Attrition/backend/Attrition/services/training.py", line 86, in train_model
+    smote_train, smote_target = smote.fit_resample(train_data, train_target)
+  File "/home/siddhesh/.local/lib/python3.10/site-packages/imblearn/base.py", line 202, in fit_resample
+    return super().fit_resample(X, y, **params)
+  File "/home/siddhesh/.local/lib/python3.10/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/siddhesh/.local/lib/python3.10/site-packages/imblearn/base.py", line 97, in fit_resample
+    check_classification_targets(y)
+  File "/home/siddhesh/.local/lib/python3.10/site-packages/sklearn/utils/multiclass.py", line 214, in check_classification_targets
+    y_type = type_of_target(y, input_name="y")
+  File "/home/siddhesh/.local/lib/python3.10/site-packages/sklearn/utils/multiclass.py", line 417, in type_of_target
+    _assert_all_finite(data, input_name=input_name)
+  File "/home/siddhesh/.local/lib/python3.10/site-packages/sklearn/utils/validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/home/siddhesh/.local/lib/python3.10/site-packages/sklearn/utils/validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input y contains NaN.
+2025-05-15 12:47:44,618 - ERROR - Internal Server Error: /training/
+2025-05-15 12:47:55,857 - INFO - Loading data from database...
+2025-05-15 12:47:55,877 - INFO - Preprocessing data...
+2025-05-15 12:47:55,885 - INFO - Training model with parameters: {'n_estimators': 1000, 'max_depth': 3, 'min_samples_leaf': 3}
+2025-05-15 12:47:55,886 - ERROR - Exception during training: Input y contains NaN.
+Traceback (most recent call last):
+  File "/home/siddhesh/Employee_Attrition (1)/Employee_Attrition/backend/Attrition/services/training.py", line 196, in train
+    model, metrics, final_params = self.train_model(
+  File "/home/siddhesh/Employee_Attrition (1)/Employee_Attrition/backend/Attrition/services/training.py", line 86, in train_model
+    smote_train, smote_target = smote.fit_resample(train_data, train_target)
+  File "/home/siddhesh/.local/lib/python3.10/site-packages/imblearn/base.py", line 202, in fit_resample
+    return super().fit_resample(X, y, **params)
+  File "/home/siddhesh/.local/lib/python3.10/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/siddhesh/.local/lib/python3.10/site-packages/imblearn/base.py", line 97, in fit_resample
+    check_classification_targets(y)
+  File "/home/siddhesh/.local/lib/python3.10/site-packages/sklearn/utils/multiclass.py", line 214, in check_classification_targets
+    y_type = type_of_target(y, input_name="y")
+  File "/home/siddhesh/.local/lib/python3.10/site-packages/sklearn/utils/multiclass.py", line 417, in type_of_target
+    _assert_all_finite(data, input_name=input_name)
+  File "/home/siddhesh/.local/lib/python3.10/site-packages/sklearn/utils/validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/home/siddhesh/.local/lib/python3.10/site-packages/sklearn/utils/validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input y contains NaN.
+2025-05-15 12:47:55,887 - ERROR - Internal Server Error: /training/
+2025-05-15 12:48:10,354 - INFO - Received prediction request for model 1b218af9-93c1-423f-8970-f217fede8bbc
+2025-05-15 12:48:10,382 - INFO - Input data shape: (1, 35)
+2025-05-15 12:48:10,385 - WARNING - Added missing feature: BusinessTravel_Travel_Frequently
+2025-05-15 12:48:10,386 - WARNING - Added missing feature: Department_Research & Development
+2025-05-15 12:48:10,386 - WARNING - Added missing feature: Department_Sales
+2025-05-15 12:48:10,386 - WARNING - Added missing feature: EducationField_Marketing
+2025-05-15 12:48:10,386 - WARNING - Added missing feature: EducationField_Medical
+2025-05-15 12:48:10,386 - WARNING - Added missing feature: EducationField_Other
+2025-05-15 12:48:10,386 - WARNING - Added missing feature: EducationField_Technical Degree
+2025-05-15 12:48:10,386 - WARNING - Added missing feature: Gender_Male
+2025-05-15 12:48:10,387 - WARNING - Added missing feature: JobRole_Laboratory Technician
+2025-05-15 12:48:10,387 - WARNING - Added missing feature: JobRole_Manager
+2025-05-15 12:48:10,387 - WARNING - Added missing feature: JobRole_Manufacturing Director
+2025-05-15 12:48:10,387 - WARNING - Added missing feature: JobRole_Research Director
+2025-05-15 12:48:10,387 - WARNING - Added missing feature: JobRole_Research Scientist
+2025-05-15 12:48:10,387 - WARNING - Added missing feature: JobRole_Sales Executive
+2025-05-15 12:48:10,387 - WARNING - Added missing feature: JobRole_Sales Representative
+2025-05-15 12:48:10,387 - WARNING - Added missing feature: MaritalStatus_Married
+2025-05-15 12:48:10,675 - INFO - Prediction successful: {'prediction': 'No', 'probability': 0.36649663984520187, 'confidence': 'Low', 'model_id': '1b218af9-93c1-423f-8970-f217fede8bbc'}
+2025-05-15 12:48:29,209 - WARNING - Not Found: /
+2025-05-16 09:55:29,090 - WARNING - Not Found: /
+2025-05-16 09:55:29,136 - WARNING - Not Found: /favicon.ico
+2025-05-16 09:55:49,241 - INFO - Loading data from database...
+2025-05-16 09:55:49,276 - INFO - Preprocessing data...
+2025-05-16 09:55:49,286 - INFO - Training model with parameters: {'n_estimators': 1000, 'max_depth': 4, 'min_samples_leaf': 2}
+2025-05-16 09:55:49,287 - ERROR - Exception during training: Input contains NaN, infinity or a value too large for dtype('float64').
+Traceback (most recent call last):
+  File "/app/Attrition/services/training.py", line 196, in train
+    model, metrics, final_params = self.train_model(
+  File "/app/Attrition/services/training.py", line 86, in train_model
+    smote_train, smote_target = smote.fit_resample(train_data, train_target)
+  File "/usr/local/lib/python3.9/site-packages/imblearn/base.py", line 203, in fit_resample
+    return super().fit_resample(X, y)
+  File "/usr/local/lib/python3.9/site-packages/imblearn/base.py", line 80, in fit_resample
+    check_classification_targets(y)
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/multiclass.py", line 189, in check_classification_targets
+    y_type = type_of_target(y)
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/multiclass.py", line 324, in type_of_target
+    _assert_all_finite(y)
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/validation.py", line 114, in _assert_all_finite
+    raise ValueError(
+ValueError: Input contains NaN, infinity or a value too large for dtype('float64').
+2025-05-16 09:55:49,302 - ERROR - Internal Server Error: /training/
+2025-05-16 09:55:58,562 - INFO - Loading data from database...
+2025-05-16 09:55:58,592 - INFO - Preprocessing data...
+2025-05-16 09:55:58,601 - INFO - Training model with parameters: {'n_estimators': 1000, 'max_depth': 4, 'min_samples_leaf': 2}
+2025-05-16 09:55:58,601 - ERROR - Exception during training: Input contains NaN, infinity or a value too large for dtype('float64').
+Traceback (most recent call last):
+  File "/app/Attrition/services/training.py", line 196, in train
+    model, metrics, final_params = self.train_model(
+  File "/app/Attrition/services/training.py", line 86, in train_model
+    smote_train, smote_target = smote.fit_resample(train_data, train_target)
+  File "/usr/local/lib/python3.9/site-packages/imblearn/base.py", line 203, in fit_resample
+    return super().fit_resample(X, y)
+  File "/usr/local/lib/python3.9/site-packages/imblearn/base.py", line 80, in fit_resample
+    check_classification_targets(y)
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/multiclass.py", line 189, in check_classification_targets
+    y_type = type_of_target(y)
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/multiclass.py", line 324, in type_of_target
+    _assert_all_finite(y)
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/validation.py", line 114, in _assert_all_finite
+    raise ValueError(
+ValueError: Input contains NaN, infinity or a value too large for dtype('float64').
+2025-05-16 09:55:58,602 - ERROR - Internal Server Error: /training/
+2025-05-16 09:56:07,858 - INFO - Received prediction request for model 1b218af9-93c1-423f-8970-f217fede8bbc
+2025-05-16 09:56:07,859 - ERROR - Error loading model: No module named 'numpy._core'
+2025-05-16 09:56:07,859 - ERROR - Prediction error: No module named 'numpy._core'
+Traceback (most recent call last):
+  File "/app/Attrition/services/prediction.py", line 111, in predict
+    model, feature_names = self.load_model(model_id)
+  File "/app/Attrition/services/prediction.py", line 50, in load_model
+    model_data = pickle.load(f)
+ModuleNotFoundError: No module named 'numpy._core'
+2025-05-16 09:56:07,860 - ERROR - Internal Server Error: /prediction/
+2025-05-16 09:56:08,827 - INFO - Received prediction request for model 1b218af9-93c1-423f-8970-f217fede8bbc
+2025-05-16 09:56:08,827 - ERROR - Error loading model: No module named 'numpy._core'
+2025-05-16 09:56:08,828 - ERROR - Prediction error: No module named 'numpy._core'
+Traceback (most recent call last):
+  File "/app/Attrition/services/prediction.py", line 111, in predict
+    model, feature_names = self.load_model(model_id)
+  File "/app/Attrition/services/prediction.py", line 50, in load_model
+    model_data = pickle.load(f)
+ModuleNotFoundError: No module named 'numpy._core'
+2025-05-16 09:56:08,828 - ERROR - Internal Server Error: /prediction/
+2025-05-16 09:56:09,227 - INFO - Received prediction request for model 1b218af9-93c1-423f-8970-f217fede8bbc
+2025-05-16 09:56:09,228 - ERROR - Error loading model: No module named 'numpy._core'
+2025-05-16 09:56:09,228 - ERROR - Prediction error: No module named 'numpy._core'
+Traceback (most recent call last):
+  File "/app/Attrition/services/prediction.py", line 111, in predict
+    model, feature_names = self.load_model(model_id)
+  File "/app/Attrition/services/prediction.py", line 50, in load_model
+    model_data = pickle.load(f)
+ModuleNotFoundError: No module named 'numpy._core'
+2025-05-16 09:56:09,229 - ERROR - Internal Server Error: /prediction/
+2025-05-16 09:56:09,436 - INFO - Received prediction request for model 1b218af9-93c1-423f-8970-f217fede8bbc
+2025-05-16 09:56:09,437 - ERROR - Error loading model: No module named 'numpy._core'
+2025-05-16 09:56:09,437 - ERROR - Prediction error: No module named 'numpy._core'
+Traceback (most recent call last):
+  File "/app/Attrition/services/prediction.py", line 111, in predict
+    model, feature_names = self.load_model(model_id)
+  File "/app/Attrition/services/prediction.py", line 50, in load_model
+    model_data = pickle.load(f)
+ModuleNotFoundError: No module named 'numpy._core'
+2025-05-16 09:56:09,438 - ERROR - Internal Server Error: /prediction/
+2025-05-16 09:56:09,631 - INFO - Received prediction request for model 1b218af9-93c1-423f-8970-f217fede8bbc
+2025-05-16 09:56:09,632 - ERROR - Error loading model: No module named 'numpy._core'
+2025-05-16 09:56:09,632 - ERROR - Prediction error: No module named 'numpy._core'
+Traceback (most recent call last):
+  File "/app/Attrition/services/prediction.py", line 111, in predict
+    model, feature_names = self.load_model(model_id)
+  File "/app/Attrition/services/prediction.py", line 50, in load_model
+    model_data = pickle.load(f)
+ModuleNotFoundError: No module named 'numpy._core'
+2025-05-16 09:56:09,633 - ERROR - Internal Server Error: /prediction/
+2025-05-16 09:56:09,832 - INFO - Received prediction request for model 1b218af9-93c1-423f-8970-f217fede8bbc
+2025-05-16 09:56:09,832 - ERROR - Error loading model: No module named 'numpy._core'
+2025-05-16 09:56:09,833 - ERROR - Prediction error: No module named 'numpy._core'
+Traceback (most recent call last):
+  File "/app/Attrition/services/prediction.py", line 111, in predict
+    model, feature_names = self.load_model(model_id)
+  File "/app/Attrition/services/prediction.py", line 50, in load_model
+    model_data = pickle.load(f)
+ModuleNotFoundError: No module named 'numpy._core'
+2025-05-16 09:56:09,833 - ERROR - Internal Server Error: /prediction/
+2025-05-16 09:56:10,020 - INFO - Received prediction request for model 1b218af9-93c1-423f-8970-f217fede8bbc
+2025-05-16 09:56:10,021 - ERROR - Error loading model: No module named 'numpy._core'
+2025-05-16 09:56:10,021 - ERROR - Prediction error: No module named 'numpy._core'
+Traceback (most recent call last):
+  File "/app/Attrition/services/prediction.py", line 111, in predict
+    model, feature_names = self.load_model(model_id)
+  File "/app/Attrition/services/prediction.py", line 50, in load_model
+    model_data = pickle.load(f)
+ModuleNotFoundError: No module named 'numpy._core'
+2025-05-16 09:56:10,022 - ERROR - Internal Server Error: /prediction/
+2025-05-16 09:56:10,194 - INFO - Received prediction request for model 1b218af9-93c1-423f-8970-f217fede8bbc
+2025-05-16 09:56:10,195 - ERROR - Error loading model: No module named 'numpy._core'
+2025-05-16 09:56:10,195 - ERROR - Prediction error: No module named 'numpy._core'
+Traceback (most recent call last):
+  File "/app/Attrition/services/prediction.py", line 111, in predict
+    model, feature_names = self.load_model(model_id)
+  File "/app/Attrition/services/prediction.py", line 50, in load_model
+    model_data = pickle.load(f)
+ModuleNotFoundError: No module named 'numpy._core'
+2025-05-16 09:56:10,196 - ERROR - Internal Server Error: /prediction/
+2025-05-16 09:56:10,387 - INFO - Received prediction request for model 1b218af9-93c1-423f-8970-f217fede8bbc
+2025-05-16 09:56:10,388 - ERROR - Error loading model: No module named 'numpy._core'
+2025-05-16 09:56:10,388 - ERROR - Prediction error: No module named 'numpy._core'
+Traceback (most recent call last):
+  File "/app/Attrition/services/prediction.py", line 111, in predict
+    model, feature_names = self.load_model(model_id)
+  File "/app/Attrition/services/prediction.py", line 50, in load_model
+    model_data = pickle.load(f)
+ModuleNotFoundError: No module named 'numpy._core'
+2025-05-16 09:56:10,388 - ERROR - Internal Server Error: /prediction/
+2025-05-16 09:56:16,052 - INFO - Received prediction request for model 2f49f2d1-2b4f-45cb-a044-ab7905d7dca2
+2025-05-16 09:56:16,053 - ERROR - Error loading model: No module named 'numpy._core'
+2025-05-16 09:56:16,053 - ERROR - Prediction error: No module named 'numpy._core'
+Traceback (most recent call last):
+  File "/app/Attrition/services/prediction.py", line 111, in predict
+    model, feature_names = self.load_model(model_id)
+  File "/app/Attrition/services/prediction.py", line 50, in load_model
+    model_data = pickle.load(f)
+ModuleNotFoundError: No module named 'numpy._core'
+2025-05-16 09:56:16,054 - ERROR - Internal Server Error: /prediction/
+2025-05-16 09:56:16,542 - INFO - Received prediction request for model 2f49f2d1-2b4f-45cb-a044-ab7905d7dca2
+2025-05-16 09:56:16,543 - ERROR - Error loading model: No module named 'numpy._core'
+2025-05-16 09:56:16,543 - ERROR - Prediction error: No module named 'numpy._core'
+Traceback (most recent call last):
+  File "/app/Attrition/services/prediction.py", line 111, in predict
+    model, feature_names = self.load_model(model_id)
+  File "/app/Attrition/services/prediction.py", line 50, in load_model
+    model_data = pickle.load(f)
+ModuleNotFoundError: No module named 'numpy._core'
+2025-05-16 09:56:16,544 - ERROR - Internal Server Error: /prediction/
+2025-05-16 09:56:16,746 - INFO - Received prediction request for model 2f49f2d1-2b4f-45cb-a044-ab7905d7dca2
+2025-05-16 09:56:16,747 - ERROR - Error loading model: No module named 'numpy._core'
+2025-05-16 09:56:16,747 - ERROR - Prediction error: No module named 'numpy._core'
+Traceback (most recent call last):
+  File "/app/Attrition/services/prediction.py", line 111, in predict
+    model, feature_names = self.load_model(model_id)
+  File "/app/Attrition/services/prediction.py", line 50, in load_model
+    model_data = pickle.load(f)
+ModuleNotFoundError: No module named 'numpy._core'
+2025-05-16 09:56:16,748 - ERROR - Internal Server Error: /prediction/
+2025-05-16 09:56:16,946 - INFO - Received prediction request for model 2f49f2d1-2b4f-45cb-a044-ab7905d7dca2
+2025-05-16 09:56:16,948 - ERROR - Error loading model: No module named 'numpy._core'
+2025-05-16 09:56:16,948 - ERROR - Prediction error: No module named 'numpy._core'
+Traceback (most recent call last):
+  File "/app/Attrition/services/prediction.py", line 111, in predict
+    model, feature_names = self.load_model(model_id)
+  File "/app/Attrition/services/prediction.py", line 50, in load_model
+    model_data = pickle.load(f)
+ModuleNotFoundError: No module named 'numpy._core'
+2025-05-16 09:56:16,949 - ERROR - Internal Server Error: /prediction/
+2025-05-16 09:56:17,146 - INFO - Received prediction request for model 2f49f2d1-2b4f-45cb-a044-ab7905d7dca2
+2025-05-16 09:56:17,147 - ERROR - Error loading model: No module named 'numpy._core'
+2025-05-16 09:56:17,147 - ERROR - Prediction error: No module named 'numpy._core'
+Traceback (most recent call last):
+  File "/app/Attrition/services/prediction.py", line 111, in predict
+    model, feature_names = self.load_model(model_id)
+  File "/app/Attrition/services/prediction.py", line 50, in load_model
+    model_data = pickle.load(f)
+ModuleNotFoundError: No module named 'numpy._core'
+2025-05-16 09:56:17,148 - ERROR - Internal Server Error: /prediction/
+2025-05-16 09:57:54,240 - INFO - Received prediction request for model 2f49f2d1-2b4f-45cb-a044-ab7905d7dca2
+2025-05-16 09:57:54,240 - ERROR - Error loading model: No module named 'numpy._core'
+2025-05-16 09:57:54,240 - ERROR - Prediction error: No module named 'numpy._core'
+Traceback (most recent call last):
+  File "/app/Attrition/services/prediction.py", line 111, in predict
+    model, feature_names = self.load_model(model_id)
+  File "/app/Attrition/services/prediction.py", line 50, in load_model
+    model_data = pickle.load(f)
+ModuleNotFoundError: No module named 'numpy._core'
+2025-05-16 09:57:54,241 - ERROR - Internal Server Error: /prediction/
+2025-05-16 09:57:59,156 - INFO - Received prediction request for model b6b777c4-6732-49fd-80bc-97315c887457
+2025-05-16 09:57:59,156 - ERROR - Error loading model: No module named 'numpy._core'
+2025-05-16 09:57:59,157 - ERROR - Prediction error: No module named 'numpy._core'
+Traceback (most recent call last):
+  File "/app/Attrition/services/prediction.py", line 111, in predict
+    model, feature_names = self.load_model(model_id)
+  File "/app/Attrition/services/prediction.py", line 50, in load_model
+    model_data = pickle.load(f)
+ModuleNotFoundError: No module named 'numpy._core'
+2025-05-16 09:57:59,157 - ERROR - Internal Server Error: /prediction/
+2025-05-16 09:58:02,683 - INFO - Received prediction request for model 1b218af9-93c1-423f-8970-f217fede8bbc
+2025-05-16 09:58:02,684 - ERROR - Error loading model: No module named 'numpy._core'
+2025-05-16 09:58:02,684 - ERROR - Prediction error: No module named 'numpy._core'
+Traceback (most recent call last):
+  File "/app/Attrition/services/prediction.py", line 111, in predict
+    model, feature_names = self.load_model(model_id)
+  File "/app/Attrition/services/prediction.py", line 50, in load_model
+    model_data = pickle.load(f)
+ModuleNotFoundError: No module named 'numpy._core'
+2025-05-16 09:58:02,685 - ERROR - Internal Server Error: /prediction/
+2025-05-16 09:58:03,612 - INFO - Received prediction request for model 1b218af9-93c1-423f-8970-f217fede8bbc
+2025-05-16 09:58:03,613 - ERROR - Error loading model: No module named 'numpy._core'
+2025-05-16 09:58:03,613 - ERROR - Prediction error: No module named 'numpy._core'
+Traceback (most recent call last):
+  File "/app/Attrition/services/prediction.py", line 111, in predict
+    model, feature_names = self.load_model(model_id)
+  File "/app/Attrition/services/prediction.py", line 50, in load_model
+    model_data = pickle.load(f)
+ModuleNotFoundError: No module named 'numpy._core'
+2025-05-16 09:58:03,613 - ERROR - Internal Server Error: /prediction/
+2025-05-16 10:37:38,713 - INFO - Loading data from database...
+2025-05-16 10:37:38,778 - INFO - Preprocessing data...
+2025-05-16 10:37:38,786 - INFO - Training model with parameters: {'n_estimators': 1000, 'max_depth': 4, 'min_samples_leaf': 2}
+2025-05-16 10:37:38,787 - ERROR - Exception during training: Input y contains NaN.
+Traceback (most recent call last):
+  File "/app/Attrition/services/training.py", line 196, in train
+    model, metrics, final_params = self.train_model(
+  File "/app/Attrition/services/training.py", line 86, in train_model
+    smote_train, smote_target = smote.fit_resample(train_data, train_target)
+  File "/usr/local/lib/python3.9/site-packages/imblearn/base.py", line 208, in fit_resample
+    return super().fit_resample(X, y)
+  File "/usr/local/lib/python3.9/site-packages/imblearn/base.py", line 104, in fit_resample
+    check_classification_targets(y)
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/multiclass.py", line 208, in check_classification_targets
+    y_type = type_of_target(y, input_name="y")
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/multiclass.py", line 383, in type_of_target
+    _assert_all_finite(data, input_name=input_name)
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/validation.py", line 122, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/validation.py", line 171, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input y contains NaN.
+2025-05-16 10:37:38,792 - ERROR - Internal Server Error: /training/
+2025-05-16 10:37:54,026 - INFO - Loading data from database...
+2025-05-16 10:37:54,058 - INFO - Preprocessing data...
+2025-05-16 10:37:54,067 - INFO - Training model with parameters: {'n_estimators': 1000, 'max_depth': 4, 'min_samples_leaf': 2}
+2025-05-16 10:37:54,068 - ERROR - Exception during training: Input y contains NaN.
+Traceback (most recent call last):
+  File "/app/Attrition/services/training.py", line 196, in train
+    model, metrics, final_params = self.train_model(
+  File "/app/Attrition/services/training.py", line 86, in train_model
+    smote_train, smote_target = smote.fit_resample(train_data, train_target)
+  File "/usr/local/lib/python3.9/site-packages/imblearn/base.py", line 208, in fit_resample
+    return super().fit_resample(X, y)
+  File "/usr/local/lib/python3.9/site-packages/imblearn/base.py", line 104, in fit_resample
+    check_classification_targets(y)
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/multiclass.py", line 208, in check_classification_targets
+    y_type = type_of_target(y, input_name="y")
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/multiclass.py", line 383, in type_of_target
+    _assert_all_finite(data, input_name=input_name)
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/validation.py", line 122, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/validation.py", line 171, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input y contains NaN.
+2025-05-16 10:37:54,068 - ERROR - Internal Server Error: /training/
+2025-05-16 10:38:44,825 - INFO - Received prediction request for model 1b218af9-93c1-423f-8970-f217fede8bbc
+2025-05-16 10:38:44,827 - ERROR - Error loading model: No module named 'numpy._core'
+2025-05-16 10:38:44,827 - ERROR - Prediction error: No module named 'numpy._core'
+Traceback (most recent call last):
+  File "/app/Attrition/services/prediction.py", line 111, in predict
+    model, feature_names = self.load_model(model_id)
+  File "/app/Attrition/services/prediction.py", line 50, in load_model
+    model_data = pickle.load(f)
+ModuleNotFoundError: No module named 'numpy._core'
+2025-05-16 10:38:44,828 - ERROR - Internal Server Error: /prediction/
+2025-05-16 10:40:39,992 - INFO - Received prediction request for model 1b218af9-93c1-423f-8970-f217fede8bbc
+2025-05-16 10:40:39,993 - ERROR - Error loading model: No module named 'numpy._core'
+2025-05-16 10:40:39,993 - ERROR - Prediction error: No module named 'numpy._core'
+Traceback (most recent call last):
+  File "/app/Attrition/services/prediction.py", line 111, in predict
+    model, feature_names = self.load_model(model_id)
+  File "/app/Attrition/services/prediction.py", line 50, in load_model
+    model_data = pickle.load(f)
+ModuleNotFoundError: No module named 'numpy._core'
+2025-05-16 10:40:39,994 - ERROR - Internal Server Error: /prediction/
+2025-05-16 10:40:48,851 - INFO - Received prediction request for model 1b218af9-93c1-423f-8970-f217fede8bbc
+2025-05-16 10:40:48,853 - ERROR - Error loading model: No module named 'numpy._core'
+2025-05-16 10:40:48,853 - ERROR - Prediction error: No module named 'numpy._core'
+Traceback (most recent call last):
+  File "/app/Attrition/services/prediction.py", line 111, in predict
+    model, feature_names = self.load_model(model_id)
+  File "/app/Attrition/services/prediction.py", line 50, in load_model
+    model_data = pickle.load(f)
+ModuleNotFoundError: No module named 'numpy._core'
+2025-05-16 10:40:48,854 - ERROR - Internal Server Error: /prediction/
+2025-05-16 10:40:55,607 - INFO - Loading data from database...
+2025-05-16 10:40:55,640 - INFO - Preprocessing data...
+2025-05-16 10:40:55,648 - INFO - Training model with parameters: {'n_estimators': 1000, 'max_depth': 4, 'min_samples_leaf': 2}
+2025-05-16 10:40:55,649 - ERROR - Exception during training: Input y contains NaN.
+Traceback (most recent call last):
+  File "/app/Attrition/services/training.py", line 196, in train
+    model, metrics, final_params = self.train_model(
+  File "/app/Attrition/services/training.py", line 86, in train_model
+    smote_train, smote_target = smote.fit_resample(train_data, train_target)
+  File "/usr/local/lib/python3.9/site-packages/imblearn/base.py", line 208, in fit_resample
+    return super().fit_resample(X, y)
+  File "/usr/local/lib/python3.9/site-packages/imblearn/base.py", line 104, in fit_resample
+    check_classification_targets(y)
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/multiclass.py", line 208, in check_classification_targets
+    y_type = type_of_target(y, input_name="y")
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/multiclass.py", line 383, in type_of_target
+    _assert_all_finite(data, input_name=input_name)
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/validation.py", line 122, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/validation.py", line 171, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input y contains NaN.
+2025-05-16 10:40:55,650 - ERROR - Internal Server Error: /training/
+2025-05-16 11:50:29,467 - INFO - Loading data from database...
+2025-05-16 11:50:29,503 - INFO - Preprocessing data...
+2025-05-16 11:50:29,511 - INFO - Training model with parameters: {'n_estimators': 1000, 'max_depth': 4, 'min_samples_leaf': 2}
+2025-05-16 11:50:29,512 - ERROR - Exception during training: Input y contains NaN.
+Traceback (most recent call last):
+  File "/app/Attrition/services/training.py", line 196, in train
+    model, metrics, final_params = self.train_model(
+  File "/app/Attrition/services/training.py", line 86, in train_model
+    smote_train, smote_target = smote.fit_resample(train_data, train_target)
+  File "/usr/local/lib/python3.9/site-packages/imblearn/base.py", line 208, in fit_resample
+    return super().fit_resample(X, y)
+  File "/usr/local/lib/python3.9/site-packages/imblearn/base.py", line 104, in fit_resample
+    check_classification_targets(y)
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/multiclass.py", line 207, in check_classification_targets
+    y_type = type_of_target(y, input_name="y")
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/multiclass.py", line 382, in type_of_target
+    _assert_all_finite(data, input_name=input_name)
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/validation.py", line 124, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/validation.py", line 173, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input y contains NaN.
+2025-05-16 11:50:29,528 - ERROR - Internal Server Error: /training/
+2025-05-16 11:51:01,956 - INFO - Received prediction request for model 1b218af9-93c1-423f-8970-f217fede8bbc
+2025-05-16 11:51:01,957 - ERROR - Error loading model: No module named 'numpy._core'
+2025-05-16 11:51:01,957 - ERROR - Prediction error: No module named 'numpy._core'
+Traceback (most recent call last):
+  File "/app/Attrition/services/prediction.py", line 111, in predict
+    model, feature_names = self.load_model(model_id)
+  File "/app/Attrition/services/prediction.py", line 50, in load_model
+    model_data = pickle.load(f)
+ModuleNotFoundError: No module named 'numpy._core'
+2025-05-16 11:51:01,958 - ERROR - Internal Server Error: /prediction/
+2025-05-16 11:51:09,824 - INFO - Received prediction request for model 156f22f1-ffd0-4ab8-8403-2a3b5dae805b
+2025-05-16 11:51:09,825 - ERROR - Error loading model: No module named 'numpy._core'
+2025-05-16 11:51:09,825 - ERROR - Prediction error: No module named 'numpy._core'
+Traceback (most recent call last):
+  File "/app/Attrition/services/prediction.py", line 111, in predict
+    model, feature_names = self.load_model(model_id)
+  File "/app/Attrition/services/prediction.py", line 50, in load_model
+    model_data = pickle.load(f)
+ModuleNotFoundError: No module named 'numpy._core'
+2025-05-16 11:51:09,825 - ERROR - Internal Server Error: /prediction/
+2025-05-16 11:51:22,928 - INFO - Loading data from database...
+2025-05-16 11:51:22,971 - INFO - Preprocessing data...
+2025-05-16 11:51:22,979 - INFO - Training model with parameters: {'n_estimators': 1000, 'max_depth': 4, 'min_samples_leaf': 2}
+2025-05-16 11:51:22,980 - ERROR - Exception during training: Input y contains NaN.
+Traceback (most recent call last):
+  File "/app/Attrition/services/training.py", line 196, in train
+    model, metrics, final_params = self.train_model(
+  File "/app/Attrition/services/training.py", line 86, in train_model
+    smote_train, smote_target = smote.fit_resample(train_data, train_target)
+  File "/usr/local/lib/python3.9/site-packages/imblearn/base.py", line 208, in fit_resample
+    return super().fit_resample(X, y)
+  File "/usr/local/lib/python3.9/site-packages/imblearn/base.py", line 104, in fit_resample
+    check_classification_targets(y)
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/multiclass.py", line 207, in check_classification_targets
+    y_type = type_of_target(y, input_name="y")
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/multiclass.py", line 382, in type_of_target
+    _assert_all_finite(data, input_name=input_name)
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/validation.py", line 124, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/usr/local/lib/python3.9/site-packages/sklearn/utils/validation.py", line 173, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input y contains NaN.
+2025-05-16 11:51:22,980 - ERROR - Internal Server Error: /training/

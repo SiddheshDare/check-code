@@ -1,0 +1,26 @@
+2025-04-27 06:40:11,531 - INFO - Loading data from database...
+2025-04-27 06:40:11,563 - INFO - Preprocessing data...
+2025-04-27 06:40:11,577 - INFO - Training model...
+2025-04-27 06:40:13,819 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.92      0.89      0.90       255
+           1       0.40      0.46      0.43        39
+
+    accuracy                           0.84       294
+   macro avg       0.66      0.68      0.67       294
+weighted avg       0.85      0.84      0.84       294
+
+2025-04-27 06:40:13,821 - INFO - Confusion Matrix:
+[[228  27]
+ [ 21  18]]
+2025-04-27 06:40:13,821 - INFO - Accuracy: 0.8367
+2025-04-27 06:40:13,821 - INFO - Precision: 0.8473
+2025-04-27 06:40:13,821 - INFO - Recall: 0.8367
+2025-04-27 06:40:13,821 - INFO - F1_score: 0.8416
+2025-04-27 06:40:13,862 - INFO - Model saved successfully to /home/rishabh/SPE/Employee_Attrition/backend/pickle/model.sav
+2025-04-27 06:40:13,862 - INFO - Training completed successfully
+2025-04-27 06:40:21,027 - ERROR - Internal Server Error: /prediction/
+2025-04-27 06:40:24,831 - ERROR - Internal Server Error: /prediction/
+2025-04-27 06:40:35,171 - ERROR - Internal Server Error: /prediction/
+2025-04-27 06:42:09,072 - INFO - /home/rishabh/SPE/Employee_Attrition/backend/Attrition/services/prediction.py changed, reloading.

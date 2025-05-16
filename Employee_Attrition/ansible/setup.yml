@@ -1,0 +1,32 @@
+---
+- name: Setup Docker on all hosts
+  hosts: all
+  become: yes
+  roles:
+    - docker
+
+- name: Setup Kubernetes cluster
+  hosts: k8s_cluster
+  become: yes
+  roles:
+    - kubernetes
+
+- name: Create namespaces and secrets
+  hosts: k8s_master
+  become: yes
+  tasks:
+    - name: Create namespace
+      command: kubectl create namespace employee-attrition --dry-run=client -o yaml | kubectl apply -f -
+    
+    - name: Create docker registry secret
+      command: >
+        kubectl create secret docker-registry regcred
+        --docker-server={{ docker_registry }}
+        --docker-username={{ docker_username }}
+        --docker-password={{ docker_password }}
+        --namespace=employee-attrition
+        --dry-run=client -o yaml | kubectl apply -f -
+      vars:
+        docker_registry: "registry.example.com"
+        docker_username: "{{ lookup('env', 'DOCKER_HUB_CREDS_USR') }}"
+        docker_password: "{{ lookup('env', 'DOCKER_HUB_CREDS_PSW') }}"
