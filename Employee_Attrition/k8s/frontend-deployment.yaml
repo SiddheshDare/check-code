@@ -16,7 +16,7 @@ spec:
       containers:
       - name: attrition-frontend
         image: siddhesh01/employee_attrition1-frontend:latest
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         env:
         - name: REACT_APP_API_URL
           value: "http://backend-service:8001"
@@ -28,11 +28,11 @@ spec:
           subPath: default.conf
         resources:
           requests:
-            cpu: 100m
-            memory: 128Mi
-          limits:
             cpu: 500m
             memory: 512Mi
+          limits:
+            cpu: 1
+            memory: 1Gi
       volumes:
       - name: nginx-config
         configMap:
