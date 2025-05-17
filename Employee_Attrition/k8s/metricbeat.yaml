@@ -25,7 +25,6 @@ data:
         - node
         - pod
         - container
-        - volume
       hosts: ["https://${KUBERNETES_SERVICE_HOST}:${KUBERNETES_SERVICE_PORT}"]
       bearer_token_file: /var/run/secrets/kubernetes.io/serviceaccount/token
       ssl.verification_mode: "none"
@@ -33,14 +32,15 @@ data:
     processors:
       - add_cloud_metadata: {}
       - add_host_metadata: {}
-      - add_kubernetes_metadata:
-          host: ${NODE_NAME}
-          in_cluster: true
 
     output.elasticsearch:
       hosts: ['${ELASTICSEARCH_HOST:elasticsearch}:${ELASTICSEARCH_PORT:9200}']
       index: "metricbeat-%{[agent.version]}-%{+yyyy.MM.dd}"
-      
+    
+    setup.template.name: "metricbeat"
+    setup.template.pattern: "metricbeat-*"
+    setup.ilm.enabled: false
+    
     setup.kibana:
       host: "${KIBANA_HOST:kibana}:${KIBANA_PORT:5601}"
       
