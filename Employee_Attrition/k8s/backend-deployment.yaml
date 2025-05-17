@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: attrition-backend
+  namespace: employee-attrition
 spec:
   replicas: 1
   selector:
@@ -15,25 +16,20 @@ spec:
       containers:
       - name: attrition-backend
         image: siddhesh01/employee_attrition1-backend:latest
-        imagePullPolicy: Never  # For local testing
+        imagePullPolicy: Always
         ports:
         - containerPort: 8001
         volumeMounts:
         - name: model-storage
           mountPath: /app/pickle/models
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 500m
+            memory: 512Mi
       volumes:
       - name: model-storage
         persistentVolumeClaim:
           claimName: model-data-pvc
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: backend-service
-spec:
-  selector:
-    app: attrition-backend
-  ports:
-  - port: 8001
-    targetPort: 8001
-  type: ClusterIP

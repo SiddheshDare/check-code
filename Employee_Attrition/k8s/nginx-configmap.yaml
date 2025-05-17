@@ -18,17 +18,14 @@ data:
             proxy_pass http://backend-service:8001/;
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         }
-
-        # Direct pass for models endpoint
+        
         location /models/ {
             proxy_pass http://backend-service:8001/models/;
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
         }
-
-        # Direct pass for prediction endpoint
+        
         location /prediction/ {
             proxy_pass http://backend-service:8001/prediction/;
             proxy_set_header Host $host;

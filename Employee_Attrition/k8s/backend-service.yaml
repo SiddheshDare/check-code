@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+  namespace: employee-attrition
+spec:
+  selector:
+    app: attrition-backend
+  ports:
+  - port: 8001
+    targetPort: 8001
+  type: ClusterIP

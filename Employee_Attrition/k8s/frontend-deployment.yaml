@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: attrition-frontend
+  namespace: employee-attrition
 spec:
   replicas: 1
   selector:
@@ -15,7 +16,7 @@ spec:
       containers:
       - name: attrition-frontend
         image: siddhesh01/employee_attrition1-frontend:latest
-        imagePullPolicy: Never  # Changed from Always to Never for local images
+        imagePullPolicy: Always
         env:
         - name: REACT_APP_API_URL
           value: "http://backend-service:8001"
@@ -25,19 +26,14 @@ spec:
         - name: nginx-config
           mountPath: /etc/nginx/conf.d/default.conf
           subPath: default.conf
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 500m
+            memory: 512Mi
       volumes:
       - name: nginx-config
         configMap:
           name: nginx-config
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: frontend-service
-spec:
-  selector:
-    app: attrition-frontend
-  ports:
-  - port: 80
-    targetPort: 80
-  type: LoadBalancer

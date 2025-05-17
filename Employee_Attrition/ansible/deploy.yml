@@ -8,26 +8,43 @@
     kubeconfig: "{{ lookup('env', 'HOME') }}/.kube/config"
   
   tasks:
-    - name: Create namespace
-      command: "kubectl --kubeconfig={{ kubeconfig }} create namespace employee-attrition"
-      ignore_errors: true
-      
-    - name: Apply ConfigMap
-      command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/nginx-configmap.yaml -n employee-attrition"
+    - name: Apply namespace
+      command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/namespace.yaml"
       
     - name: Apply persistent volume
       command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/persistent-volume.yaml -n employee-attrition"
       
-    - name: Deploy backend
+    - name: Apply ConfigMap
+      command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/nginx-configmap.yaml -n employee-attrition"
+      
+    - name: Deploy backend deployment
       command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/backend-deployment.yaml -n employee-attrition"
       
-    - name: Deploy frontend
+    - name: Deploy backend service
+      command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/backend-service.yaml -n employee-attrition"
+      
+    - name: Deploy frontend deployment
       command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/frontend-deployment.yaml -n employee-attrition"
       
-    - name: Get services
-      command: "kubectl --kubeconfig={{ kubeconfig }} get services -n employee-attrition"
-      register: services
+    - name: Deploy frontend service
+      command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/frontend-service.yaml -n employee-attrition"
       
-    - name: Display services
+    - name: Apply backend HPA
+      command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/backend-hpa.yaml -n employee-attrition"
+      ignore_errors: true
+      
+    - name: Apply frontend HPA
+      command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/frontend-hpa.yaml -n employee-attrition"
+      ignore_errors: true
+      
+    - name: Wait for deployments to be ready
+      command: "kubectl --kubeconfig={{ kubeconfig }} wait --for=condition=Available deployments --all -n employee-attrition --timeout=120s"
+      ignore_errors: true
+      
+    - name: Get all resources
+      command: "kubectl --kubeconfig={{ kubeconfig }} get all -n employee-attrition"
+      register: resources
+      
+    - name: Display resources
       debug:
-        var: services.stdout_lines
+        var: resources.stdout_lines
