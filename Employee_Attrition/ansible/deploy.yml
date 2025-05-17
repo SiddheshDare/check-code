@@ -58,3 +58,33 @@
     - name: Display resources
       debug:
         var: resources.stdout_lines
+
+    - name: Apply ELK namespace
+      command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/elk-namespace.yaml"
+      
+    - name: Deploy Elasticsearch
+      command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/elasticsearch.yaml"
+      
+    - name: Deploy Logstash
+      command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/logstash.yaml"
+      
+    - name: Deploy Kibana
+      command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/kibana.yaml"
+      
+    - name: Deploy Filebeat
+      command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/filebeat.yaml"
+      
+    - name: Deploy Metricbeat for system metrics
+      command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/metricbeat.yaml"
+      
+    - name: Wait for ELK stack to be ready
+      command: "kubectl --kubeconfig={{ kubeconfig }} wait --for=condition=Available deployments --all -n elk-monitoring --timeout=180s"
+      ignore_errors: true
+      
+    - name: Get ELK resources
+      command: "kubectl --kubeconfig={{ kubeconfig }} get all -n elk-monitoring"
+      register: elk_resources
+      
+    - name: Display ELK resources
+      debug:
+        var: elk_resources.stdout_lines
