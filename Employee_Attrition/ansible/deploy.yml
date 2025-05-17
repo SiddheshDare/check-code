@@ -61,9 +61,30 @@
 
     - name: Apply ELK namespace
       command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/elk-namespace.yaml"
-      
-    - name: Apply ELK namespace
-      command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/elk-namespace.yaml"
+    
+    - name: Clean up existing ELK stack deployments
+      ansible.builtin.shell: |
+        # Remove deployments first
+        kubectl --kubeconfig={{ kubeconfig }} delete deployment elasticsearch logstash kibana -n elk-monitoring --ignore-not-found=true
+        kubectl --kubeconfig={{ kubeconfig }} delete daemonset filebeat metricbeat -n elk-monitoring --ignore-not-found=true
+        
+        # Remove services
+        kubectl --kubeconfig={{ kubeconfig }} delete service elasticsearch logstash kibana -n elk-monitoring --ignore-not-found=true
+        
+        # Remove configmaps
+        kubectl --kubeconfig={{ kubeconfig }} delete configmap logstash-config filebeat-config metricbeat-config -n elk-monitoring --ignore-not-found=true
+        
+        # Remove PVCs (last, after deployments are gone)
+        kubectl --kubeconfig={{ kubeconfig }} delete pvc elasticsearch-data-pvc -n elk-monitoring --ignore-not-found=true
+        
+        # Remove service accounts and roles
+        kubectl --kubeconfig={{ kubeconfig }} delete serviceaccount filebeat metricbeat -n elk-monitoring --ignore-not-found=true
+        kubectl --kubeconfig={{ kubeconfig }} delete clusterrole filebeat metricbeat --ignore-not-found=true
+        kubectl --kubeconfig={{ kubeconfig }} delete clusterrolebinding filebeat metricbeat --ignore-not-found=true
+        
+        # Wait for resources to be removed
+        sleep 5
+      ignore_errors: yes
       
     - name: Apply Elasticsearch persistent volume
       command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/elasticsearch-storage.yaml"

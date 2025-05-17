@@ -53,15 +53,3 @@ spec:
   - port: 9200
     targetPort: 9200
   type: ClusterIP
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: elasticsearch-data-pvc
-  namespace: elk-monitoring
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 10Gi
