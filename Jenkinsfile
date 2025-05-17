@@ -40,8 +40,8 @@ pipeline {
                 dir('Employee_Attrition') {
                     sh '''
                     export ANSIBLE_PYTHON_INTERPRETER=/usr/bin/python3
-                    HOME=$(eval echo ~$USER)
-                    ansible-playbook -i ansible/inventory ansible/deploy.yml
+                    export KUBECONFIG=/home/siddhesh/.kube/config
+                    ansible-playbook -i ansible/inventory -e "kubeconfig=/home/siddhesh/.kube/config" ansible/deploy.yml
                     '''
                 }
             }
@@ -49,8 +49,8 @@ pipeline {
         
         stage('Verify Deployment') {
             steps {
-                sh 'kubectl get pods -n employee-attrition'
-                sh 'kubectl get services -n employee-attrition'
+                sh 'KUBECONFIG=/home/siddhesh/.kube/config kubectl get pods -n employee-attrition'
+                sh 'KUBECONFIG=/home/siddhesh/.kube/config kubectl get services -n employee-attrition'
             }
         }
     }
