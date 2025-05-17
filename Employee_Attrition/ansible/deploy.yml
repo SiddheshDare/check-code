@@ -62,6 +62,16 @@
     - name: Apply ELK namespace
       command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/elk-namespace.yaml"
       
+    - name: Apply ELK namespace
+      command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/elk-namespace.yaml"
+      
+    - name: Apply Elasticsearch persistent volume
+      command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/elasticsearch-storage.yaml"
+      
+    - name: Wait for PVC to be bound
+      command: "kubectl --kubeconfig={{ kubeconfig }} wait --for=condition=bound pvc/elasticsearch-data-pvc -n elk-monitoring --timeout=30s"
+      ignore_errors: true
+      
     - name: Deploy Elasticsearch
       command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/elasticsearch.yaml"
       
