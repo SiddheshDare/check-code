@@ -40,8 +40,9 @@ pipeline {
                     dir('Employee_Attrition') {
                         sh '''
                         export ANSIBLE_PYTHON_INTERPRETER=/usr/bin/python3
-                        export KUBECONFIG=${KUBECONFIG_FILE}
-                        ansible-playbook -i ansible/inventory -e "kubeconfig=${KUBECONFIG_FILE}" ansible/deploy.yml
+                        export KUBECONFIG="${KUBECONFIG_FILE}"
+                        cat "${KUBECONFIG_FILE}" > /tmp/kubeconfig
+                        ansible-playbook -i ansible/inventory -e "kubeconfig=/tmp/kubeconfig" ansible/deploy.yml
                         '''
                     }
                 }
