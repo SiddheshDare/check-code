@@ -36,21 +36,24 @@ pipeline {
         
         stage('Deploy with Ansible') {
             steps {
-                // Using the existing Ansible playbook for deployment
-                dir('Employee_Attrition') {
-                    sh '''
-                    export ANSIBLE_PYTHON_INTERPRETER=/usr/bin/python3
-                    export KUBECONFIG=/home/siddhesh/.kube/config
-                    ansible-playbook -i ansible/inventory -e "kubeconfig=/home/siddhesh/.kube/config" ansible/deploy.yml
-                    '''
+                withCredentials([file(credentialsId: 'mykubeconfig', variable: 'KUBECONFIG_FILE')]) {
+                    dir('Employee_Attrition') {
+                        sh '''
+                        export ANSIBLE_PYTHON_INTERPRETER=/usr/bin/python3
+                        export KUBECONFIG=${KUBECONFIG_FILE}
+                        ansible-playbook -i ansible/inventory -e "kubeconfig=${KUBECONFIG_FILE}" ansible/deploy.yml
+                        '''
+                    }
                 }
             }
         }
         
         stage('Verify Deployment') {
             steps {
-                sh 'KUBECONFIG=/home/siddhesh/.kube/config kubectl get pods -n employee-attrition'
-                sh 'KUBECONFIG=/home/siddhesh/.kube/config kubectl get services -n employee-attrition'
+                withCredentials([file(credentialsId: 'mykubeconfig', variable: 'KUBECONFIG_FILE')]) {
+                    sh 'KUBECONFIG=${KUBECONFIG_FILE} kubectl get pods -n employee-attrition'
+                    sh 'KUBECONFIG=${KUBECONFIG_FILE} kubectl get services -n employee-attrition'
+                }
             }
         }
     }
