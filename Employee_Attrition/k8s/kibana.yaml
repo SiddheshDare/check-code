@@ -19,18 +19,6 @@ spec:
         env:
         - name: ELASTICSEARCH_HOSTS
           value: "http://elasticsearch:9200"
-        - name: ELASTICSEARCH_USERNAME
-          value: "elastic"
-        - name: ELASTICSEARCH_PASSWORD
-          value: "changeme"
-        - name: XPACK_SECURITY_ENABLED
-          value: "false"
-        - name: XPACK_REPORTING_ENABLED
-          value: "false" 
-        - name: XPACK_SECURITY_ENCRYPTIONKEY
-          value: "something_at_least_32_characters_long"
-        - name: XPACK_ENCRYPTEDSAVEDOBJECTS_ENCRYPTIONKEY
-          value: "something_at_least_32_characters_long"
         ports:
         - containerPort: 5601
         resources:
