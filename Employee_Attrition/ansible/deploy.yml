@@ -4,25 +4,28 @@
   connection: local
   gather_facts: false
   
+  vars:
+    kubeconfig: "{{ lookup('env', 'HOME') }}/.kube/config"
+  
   tasks:
     - name: Create namespace
-      command: kubectl create namespace employee-attrition
+      command: "kubectl --kubeconfig={{ kubeconfig }} create namespace employee-attrition"
       ignore_errors: true
       
     - name: Apply ConfigMap
-      command: kubectl apply -f ../k8s/nginx-configmap.yaml -n employee-attrition
+      command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/nginx-configmap.yaml -n employee-attrition"
       
     - name: Apply persistent volume
-      command: kubectl apply -f ../k8s/persistent-volume.yaml -n employee-attrition
+      command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/persistent-volume.yaml -n employee-attrition"
       
     - name: Deploy backend
-      command: kubectl apply -f ../k8s/backend-deployment.yaml -n employee-attrition
+      command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/backend-deployment.yaml -n employee-attrition"
       
     - name: Deploy frontend
-      command: kubectl apply -f ../k8s/frontend-deployment.yaml -n employee-attrition
+      command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/frontend-deployment.yaml -n employee-attrition"
       
     - name: Get services
-      command: kubectl get services -n employee-attrition
+      command: "kubectl --kubeconfig={{ kubeconfig }} get services -n employee-attrition"
       register: services
       
     - name: Display services

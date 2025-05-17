@@ -40,6 +40,7 @@ pipeline {
                 dir('Employee_Attrition') {
                     sh '''
                     export ANSIBLE_PYTHON_INTERPRETER=/usr/bin/python3
+                    HOME=$(eval echo ~$USER)
                     ansible-playbook -i ansible/inventory ansible/deploy.yml
                     '''
                 }
