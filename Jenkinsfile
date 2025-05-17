@@ -85,7 +85,6 @@ pipeline {
     
     post {
         always {
-            sh 'docker logout || true'
             sh 'rm -f /tmp/kubeconfig || true'
             cleanWs()
         }
