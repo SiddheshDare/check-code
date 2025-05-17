@@ -8,6 +8,16 @@
     kubeconfig: "{{ lookup('env', 'HOME') }}/.kube/config"
   
   tasks:
+    - name: Delete previous resources
+      ansible.builtin.shell: |
+        kubectl --kubeconfig={{ kubeconfig }} delete hpa frontend-hpa backend-hpa -n employee-attrition --ignore-not-found=true
+        kubectl --kubeconfig={{ kubeconfig }} delete service frontend-service backend-service -n employee-attrition --ignore-not-found=true
+        kubectl --kubeconfig={{ kubeconfig }} delete deployment attrition-frontend attrition-backend -n employee-attrition --ignore-not-found=true
+        kubectl --kubeconfig={{ kubeconfig }} delete configmap nginx-config -n employee-attrition --ignore-not-found=true
+        kubectl --kubeconfig={{ kubeconfig }} delete pvc model-data-pvc -n employee-attrition --ignore-not-found=true
+        kubectl --kubeconfig={{ kubeconfig }} delete pv model-data-pv --ignore-not-found=true
+      ignore_errors: yes
+      
     - name: Apply namespace
       command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/namespace.yaml"
       
