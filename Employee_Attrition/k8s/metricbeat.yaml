@@ -15,9 +15,10 @@ data:
         - network
         - process
         - process_summary
+      # Remove the top_n limitation to collect all processes
       process.include_top_n:
-        by_cpu: 5
-        by_memory: 5
+        by_cpu: 0  # 0 means all processes
+        by_memory: 0  # 0 means all processes
 
     - module: kubernetes
       period: 10s
@@ -30,9 +31,9 @@ data:
       ssl.verification_mode: "none"
 
     processors:
-      - add_cloud_metadata: {}
+      # Remove cloud metadata processor to avoid timeout issues
       - add_host_metadata: {}
-
+    
     output.elasticsearch:
       hosts: ['${ELASTICSEARCH_HOST:elasticsearch}:${ELASTICSEARCH_PORT:9200}']
       index: "metricbeat-%{[agent.version]}-%{+yyyy.MM.dd}"
@@ -45,6 +46,15 @@ data:
       host: "${KIBANA_HOST:kibana}:${KIBANA_PORT:5601}"
       
     setup.dashboards.enabled: true
+    
+    # Add explicit logging to see potential errors
+    logging.level: debug
+    logging.to_files: true
+    logging.files:
+      path: /var/log/metricbeat
+      name: metricbeat
+      keepfiles: 2
+      permissions: 0644
 ---
 apiVersion: apps/v1
 kind: DaemonSet
