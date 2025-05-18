@@ -12,26 +12,27 @@ data:
     }
     
     filter {
+      # Create standardized container field for easy filtering
+      if [kubernetes][container] {
+        mutate {
+          add_field => {
+            "container_name" => "%{[kubernetes][container][name]}"
+            "pod_name" => "%{[kubernetes][pod][name]}"
+            "namespace" => "%{[kubernetes][namespace]}"
+          }
+        }
+      }
+      
       # Application-specific processing
       if [kubernetes][container][name] == "attrition-backend" {
         grok {
           match => { "message" => "%{TIMESTAMP_ISO8601:timestamp} - %{LOGLEVEL:log_level} - %{GREEDYDATA:log_message}" }
         }
-        mutate {
-          add_field => { "[@metadata][index]" => "attrition-app-%{+YYYY.MM.dd}" }
-        }
       }
-      # Process Kubernetes logs
-      else if [kubernetes] {
-        mutate {
-          add_field => { "[@metadata][index]" => "k8s-logs-%{+YYYY.MM.dd}" }
-        }
-      }
-      # Process any other system logs
-      else {
-        mutate {
-          add_field => { "[@metadata][index]" => "system-logs-%{+YYYY.MM.dd}" }
-        }
+      
+      # Process all logs into a single index for easier container filtering
+      mutate {
+        add_field => { "[@metadata][index]" => "k8s-logs-%{+YYYY.MM.dd}" }
       }
     }
     
@@ -40,8 +41,6 @@ data:
         hosts => ["elasticsearch:9200"]
         index => "%{[@metadata][index]}"
       }
-      # Debug output
-      stdout { codec => rubydebug }
     }
 ---
 apiVersion: apps/v1
