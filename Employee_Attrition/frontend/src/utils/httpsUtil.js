@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Dynamically determine API base URL based on environment
 const BASE_URL = process.env.NODE_ENV === 'production' 
-  ? '' // Use relative URLs in production/Kubernetes
+  ? '/api' // Use a relative API path instead of empty string
   : 'http://localhost:8001'; // Use localhost in development
 
 // Training-related functions
