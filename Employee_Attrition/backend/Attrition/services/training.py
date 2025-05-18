@@ -157,6 +157,74 @@ class Training:
             logger.error(f"Error loading model metadata: {str(e)}")
             return []
 
+    # def train(self, request):
+    #     """Main training pipeline"""
+    #     response = {
+    #         'status': status.HTTP_200_OK,
+    #         'response': 'Model trained successfully',
+    #         'metrics': {},
+    #         'model_id': None
+    #     }
+        
+    #     try:
+    #         # Parse request data
+    #         try:
+    #             request_data = json.loads(request.body.decode('utf-8'))
+    #             model_params = request_data.get('model_params', {})
+    #             selected_features = request_data.get('features', None)
+    #         except json.JSONDecodeError:
+    #             raise ValueError("Invalid JSON input")
+            
+    #         # Load data
+    #         logger.info("Loading data from database...")
+    #         all_data = EmployeeData.objects.all().order_by("EmployeeNumber")
+    #         df = pd.DataFrame(list(all_data.values()))
+            
+    #         if len(df) < 100:  # Minimum data threshold
+    #             raise ValueError("Insufficient data for training")
+            
+    #         # Split into train/test
+    #         train_df, test_df = train_test_split(df, test_size=0.2, random_state=42)
+            
+    #         # Preprocess data
+    #         logger.info("Preprocessing data...")
+    #         train_features, train_target = self.preprocess_data(train_df, selected_features)
+    #         test_features, test_target = self.preprocess_data(test_df, selected_features)
+            
+    #         # Train model
+    #         logger.info("Training model with parameters: %s", model_params)
+    #         model, metrics, final_params = self.train_model(
+    #             train_features, train_target, 
+    #             test_features, test_target,
+    #             model_params
+    #         )
+            
+    #         # Save model and metadata
+    #         model_id = self.save_model(
+    #             model, 
+    #             train_features.columns.tolist(),
+    #             final_params,
+    #             metrics
+    #         )
+            
+    #         # Update response
+    #         response.update({
+    #             'metrics': metrics,
+    #             'model_id': model_id
+    #         })
+    #         logger.info("Training completed successfully")
+            
+    #     except Exception as e:
+    #         error_msg = f"Exception during training: {str(e)}"
+    #         logger.error(error_msg, exc_info=True)
+            
+    #         response.update({
+    #             'status': status.HTTP_500_INTERNAL_SERVER_ERROR,
+    #             'response': error_msg
+    #         })
+        
+    #     return response
+
     def train(self, request):
         """Main training pipeline"""
         response = {
@@ -165,7 +233,7 @@ class Training:
             'metrics': {},
             'model_id': None
         }
-        
+
         try:
             # Parse request data
             try:
@@ -174,53 +242,54 @@ class Training:
                 selected_features = request_data.get('features', None)
             except json.JSONDecodeError:
                 raise ValueError("Invalid JSON input")
-            
-            # Load data
-            logger.info("Loading data from database...")
-            all_data = EmployeeData.objects.all().order_by("EmployeeNumber")
-            df = pd.DataFrame(list(all_data.values()))
-            
+
+            # Load only first 1450 rows
+            logger.info("Loading first 1450 rows from database...")
+            qs = EmployeeData.objects.all().order_by("EmployeeNumber")[:1450]
+            df = pd.DataFrame.from_records(qs.values())
+            logger.info("Loaded %d rows for training", len(df))
+
             if len(df) < 100:  # Minimum data threshold
                 raise ValueError("Insufficient data for training")
-            
+
             # Split into train/test
             train_df, test_df = train_test_split(df, test_size=0.2, random_state=42)
-            
+
             # Preprocess data
             logger.info("Preprocessing data...")
             train_features, train_target = self.preprocess_data(train_df, selected_features)
             test_features, test_target = self.preprocess_data(test_df, selected_features)
-            
+
             # Train model
             logger.info("Training model with parameters: %s", model_params)
             model, metrics, final_params = self.train_model(
-                train_features, train_target, 
+                train_features, train_target,
                 test_features, test_target,
                 model_params
             )
-            
+
             # Save model and metadata
             model_id = self.save_model(
-                model, 
+                model,
                 train_features.columns.tolist(),
                 final_params,
                 metrics
             )
-            
+
             # Update response
             response.update({
                 'metrics': metrics,
                 'model_id': model_id
             })
             logger.info("Training completed successfully")
-            
+
         except Exception as e:
             error_msg = f"Exception during training: {str(e)}"
             logger.error(error_msg, exc_info=True)
-            
+
             response.update({
                 'status': status.HTTP_500_INTERNAL_SERVER_ERROR,
                 'response': error_msg
             })
-        
+
         return response
