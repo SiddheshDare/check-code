@@ -2,13 +2,13 @@ import axios from "axios";
 
 // Dynamically determine API base URL based on environment
 const BASE_URL = process.env.NODE_ENV === 'production' 
-  ? '/api' // Use a relative API path instead of empty string
-  : 'http://localhost:8001'; // Use localhost in development
+  ? '' // Remove '/api' prefix
+  : 'http://localhost:8001';
 
 // Training-related functions
 export const trainModel = async (trainingConfig) => {
   try {
-    const response = await axios.post(`${BASE_URL}/api/training/`, trainingConfig);
+    const response = await axios.post(`${BASE_URL}/training/`, trainingConfig); // Remove '/api'
     return response.data;
   } catch (error) {
     console.error("Error during training:", error);
@@ -82,7 +82,7 @@ export const predictData = async () => {
 
 export const addEmployee = async (employeeData) => {
   try {
-    const response = await axios.post(`${BASE_URL}/api/employees/`, employeeData);
+    const response = await axios.post(`${BASE_URL}/employees/add/`, employeeData); // Remove '/api'
     return response.data;
   } catch (error) {
     console.error("Error adding employee:", error);
