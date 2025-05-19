@@ -86,6 +86,20 @@ export const addEmployee = async (employeeData) => {
     return response.data;
   } catch (error) {
     console.error("Error adding employee:", error);
-    throw new Error(error.response?.data?.error || "Failed to add employee");
+    // More detailed logging for debugging
+    if (error.response) {
+      console.error("Response status:", error.response.status);
+      console.error("Response data:", error.response.data);
+    } else if (error.request) {
+      console.error("No response received:", error.request);
+    } else {
+      console.error("Error details:", error.message);
+    }
+    
+    throw new Error(
+      error.response?.data?.error || 
+      error.message || 
+      "Failed to add employee - please try again later"
+    );
   }
 };

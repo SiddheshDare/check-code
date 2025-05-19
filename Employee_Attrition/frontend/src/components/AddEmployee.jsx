@@ -95,10 +95,11 @@ const AddEmployeeForm = () => {
 
       // Submit to backend
       const response = await addEmployee(submissionData);
-      
-      if (response.data.success) {
+
+      // Check if response exists before accessing properties
+      if (response && response.success) {
         setSuccess(true);
-        setMessage(`Employee added successfully with number: ${response.data.employee_number}`);
+        setMessage(`Employee added successfully with number: ${response.employee_number || 'N/A'}`);
         // Reset form to initial state
         setFormData({
           Age: '',
@@ -137,7 +138,9 @@ const AddEmployeeForm = () => {
         });
       } else {
         setSuccess(false);
-        setMessage(`Error: ${JSON.stringify(response.data.errors)}`);
+        // Ensure we don't try to stringify undefined
+        const errorMsg = response?.errors ? JSON.stringify(response.errors) : 'Unknown error occurred';
+        setMessage(`Error: ${errorMsg}`);
       }
     } catch (error) {
       setSuccess(false);
