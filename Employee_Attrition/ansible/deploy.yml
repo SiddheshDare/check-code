@@ -3,15 +3,9 @@
   hosts: local
   connection: local
   gather_facts: false
-
+  
   vars:
     kubeconfig: "{{ lookup('env', 'HOME') }}/.kube/config"
-    namespace: employee-attrition
-    backend_label_selector: "app=attrition-backend"
-    csv_local_path: "../Employee_Attrition_Prediction.csv"
-    csv_remote_path: "/app/Employee_Attrition_Prediction.csv"
-    import_script_path: "../backend/Attrition/scripts/importdata.py"
-    import_script_remote: "/app/importdata.py"
   
   tasks:
     - name: Delete previous resources
@@ -94,32 +88,7 @@
         # Wait for resources to be removed
         sleep 5
       ignore_errors: yes
-
-    - name: Get backend pod name
-      shell: |
-        kubectl get pods -n {{ namespace }} -l {{ backend_label_selector }} -o jsonpath="{.items[0].metadata.name}"
-      register: backend_pod_name
-      changed_when: false
-
-    - name: Copy CSV file to backend pod
-      shell: |
-        kubectl cp {{ csv_local_path }} {{ namespace }}/{{ backend_pod_name.stdout }}:{{ csv_remote_path }}
-      args:
-        executable: /bin/bash
-
-    - name: Copy import script to backend pod
-      shell: |
-        kubectl cp {{ import_script_path }} {{ namespace }}/{{ backend_pod_name.stdout }}:{{ import_script_remote }}
-      args:
-        executable: /bin/bash
-
-    - name: Import employee data into database
-      shell: |
-        kubectl exec -n {{ namespace }} {{ backend_pod_name.stdout }} -- python manage.py shell < {{ import_script_remote }}
-      args:
-        executable: /bin/bash
-        
-          
+      
     - name: Apply Elasticsearch persistent volume
       command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/elasticsearch-storage.yaml"
       
