@@ -26,3 +26,62 @@ spec:
   resources:
     requests:
       storage: 1Gi
+---
+# Add these new PV and PVC for database
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: db-data-pv
+  namespace: employee-attrition
+  labels:
+    type: local
+spec:
+  storageClassName: standard
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/data/db-storage"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: db-data-pvc
+  namespace: employee-attrition
+spec:
+  storageClassName: standard
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: app-logs-pv
+  namespace: employee-attrition
+  labels:
+    type: local
+spec:
+  storageClassName: standard
+  capacity:
+    storage: 500Mi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/data/app-logs"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: app-logs-pvc
+  namespace: employee-attrition
+spec:
+  storageClassName: standard
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 500Mi
