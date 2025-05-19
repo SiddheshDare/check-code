@@ -62,6 +62,34 @@
       debug:
         var: resources.stdout_lines
 
+    - name: Wait for backend deployment to be ready
+      command: "kubectl --kubeconfig={{ kubeconfig }} wait --for=condition=Available deployment/attrition-backend -n employee-attrition --timeout=120s"
+      ignore_errors: true
+
+    - name: Run database migrations
+      shell: |
+        POD_NAME=$(kubectl --kubeconfig={{ kubeconfig }} get pods -n employee-attrition -l app=attrition-backend -o jsonpath='{.items[0].metadata.name}')
+        kubectl --kubeconfig={{ kubeconfig }} exec -it $POD_NAME -n employee-attrition -- python manage.py migrate
+      register: migration_output
+      ignore_errors: true
+
+    - name: Display migration output
+      debug:
+        var: migration_output.stdout_lines
+      when: migration_output.stdout_lines is defined
+
+    - name: Import data
+      shell: |
+        POD_NAME=$(kubectl --kubeconfig={{ kubeconfig }} get pods -n employee-attrition -l app=attrition-backend -o jsonpath='{.items[0].metadata.name}')
+        kubectl --kubeconfig={{ kubeconfig }} exec -it $POD_NAME -n employee-attrition -- python manage.py runscript importdata
+      register: import_output
+      ignore_errors: true
+
+    - name: Display import output
+      debug:
+        var: import_output.stdout_lines
+      when: import_output.stdout_lines is defined
+
     - name: Apply ELK namespace
       command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/elk-namespace.yaml"
     
