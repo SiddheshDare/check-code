@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { addEmployee } from '../utils/httpsUtil';
 
 const AddEmployeeForm = () => {
   // Initialize form data with empty values
@@ -93,7 +94,7 @@ const AddEmployeeForm = () => {
       });
 
       // Submit to backend
-      const response = await axios.post('http://127.0.0.1:8000/employees/add/', submissionData);
+      const response = await addEmployee(submissionData);
       
       if (response.data.success) {
         setSuccess(true);
