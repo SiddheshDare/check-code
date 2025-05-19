@@ -3,9 +3,15 @@
   hosts: local
   connection: local
   gather_facts: false
-  
+
   vars:
     kubeconfig: "{{ lookup('env', 'HOME') }}/.kube/config"
+    namespace: employee-attrition
+    backend_label_selector: "app=attrition-backend"
+    csv_local_path: "../Employee_Attrition_Prediction.csv"
+    csv_remote_path: "/app/Employee_Attrition_Prediction.csv"
+    import_script_path: "../backend/Attrition/scripts/importdata.py"
+    import_script_remote: "/app/importdata.py"
   
   tasks:
     - name: Delete previous resources
