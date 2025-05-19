@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: attrition-backend
-        image: siddhesh01/employee_attrition1-backend:latest
+        image: siddhesh01/employee_attrition-backend:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8001

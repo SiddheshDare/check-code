@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: attrition-frontend
-        image: siddhesh01/employee_attrition1-frontend:latest
+        image: siddhesh01/employee_attrition-frontend:latest
         imagePullPolicy: IfNotPresent
         env:
         - name: REACT_APP_API_URL

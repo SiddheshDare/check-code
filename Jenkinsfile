@@ -2,10 +2,10 @@ pipeline {
     agent any
     
     environment {
-        GITHUB_REPO_URL = 'https://github.com/SiddheshDare/Test.git'
+        GITHUB_REPO_URL = 'https://github.com/SiddheshDare/check-code.git'
         DOCKER_HUB_CREDS = credentials('DockerHubCred')
-        DOCKER_IMAGE_BACKEND = 'siddhesh01/employee_attrition1-backend'
-        DOCKER_IMAGE_FRONTEND = 'siddhesh01/employee_attrition1-frontend'
+        DOCKER_IMAGE_BACKEND = 'siddhesh01/employee_attrition-backend'
+        DOCKER_IMAGE_FRONTEND = 'siddhesh01/employee_attrition-frontend'
         DOCKER_TAG = "${env.BUILD_NUMBER}"
         KUBECONFIG_CRED = credentials('mykubeconfig')
     }
