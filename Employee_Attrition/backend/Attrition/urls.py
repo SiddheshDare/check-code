@@ -10,7 +10,7 @@ from .views import (
 )
 
 urlpatterns = [
-    path('training/', TrainChurnModelView.as_view(), name='model_training'),
+    path('training', TrainChurnModelView.as_view(), name='model_training'),
     path('prediction/', PredChurnModelView.as_view(), name='model_prediction'),
     path('models/', ModelListView.as_view(), name='model-list'),
     path('models/<uuid:model_id>/', ModelDetailView.as_view(), name='model-detail'),
