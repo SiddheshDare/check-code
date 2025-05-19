@@ -14,18 +14,16 @@ spec:
         app: attrition-backend
     spec:
       containers:
-      - name: backend
+      - name: attrition-backend
         image: siddhesh01/employee_attrition-backend:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8001
         volumeMounts:
         - name: model-storage
-          mountPath: /app/pickle  # Path where your models are saved
-        - name: db-storage
-          mountPath: /app/db  # Path for SQLite database
+          mountPath: /app/pickle/models
         - name: app-logs
-          mountPath: /app/log  # Path for application logs
+          mountPath: /app/log
         resources:
           requests:
             cpu: 500m
@@ -40,6 +38,3 @@ spec:
       - name: app-logs
         persistentVolumeClaim:
           claimName: app-logs-pvc
-      - name: db-storage
-        persistentVolumeClaim:
-          claimName: db-data-pvc

@@ -15,7 +15,7 @@
         kubectl --kubeconfig={{ kubeconfig }} delete deployment attrition-frontend attrition-backend -n employee-attrition --ignore-not-found=true
         kubectl --kubeconfig={{ kubeconfig }} delete configmap nginx-config -n employee-attrition --ignore-not-found=true
         kubectl --kubeconfig={{ kubeconfig }} delete pvc model-data-pvc app-logs-pvc -n employee-attrition --ignore-not-found=true
-        kubectl --kubeconfig={{ kubeconfig }} delete pv model-data-pv --ignore-not-found=true
+        # kubectl --kubeconfig={{ kubeconfig }} delete pv model-data-pv --ignore-not-found=true
       ignore_errors: yes
       
     - name: Apply namespace
@@ -23,6 +23,7 @@
       
     - name: Apply persistent volume
       command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/persistent-volume.yaml -n employee-attrition"
+      ignore_errors: true
     
     - name: Apply app logs persistent volume claim
       command: "kubectl --kubeconfig={{ kubeconfig }} apply -f ../k8s/app-logs-pvc.yaml -n employee-attrition"
