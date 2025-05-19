@@ -2,7 +2,7 @@ import pandas as pd
 from Attrition.models import EmployeeData
 
 def run():
-    csv_file_path = '/home/rishabh/SPE/Employee_Attrition/Employee_Attrition_Prediction.csv'
+    csv_file_path = '/home/siddhesh/Employee_Attrition (1)/Employee_Attrition/Employee_Attrition_Prediction.csv'
     df = pd.read_csv(csv_file_path)
 
     for index, row in df.iterrows():
